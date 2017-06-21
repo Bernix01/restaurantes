@@ -17,6 +17,7 @@ import {ConnectedRouter, push, routerMiddleware} from 'react-router-redux'
 
 import reducers from './reducers'
 import App from './components/App'
+import Restaurant from './components/Restaurante'
 
 const $app = document.getElementById('app')
 const logger = createLogger()
@@ -32,6 +33,8 @@ ReactDOM.render(
   <ConnectedRouter history={history}>
     <div>
       <Route exact path="/" component={App}/>
+      <Route exact path="/facultades" component={App}/>
+      <Route exact path="/facultades/:facultad/:restaurant" component={Restaurant}/>
     </div>
   </ConnectedRouter>
 </Provider>, $app)

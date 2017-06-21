@@ -24,9 +24,8 @@ class Header extends React.Component {
 
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Facultades</a></li>
-      <li><a href="#">Restaurantes</a></li>
-      <li><a href="#">Cartelera</a></li>
+      <li class="active"><a href="/facultades">Facultades</a></li>
+      <li><a href="/cartelera">Cartelera</a></li>
       <li><a href="#">Acerca de</a></li>
       <li><a href="#">Iniciar sesión</a></li>
     </ul>
