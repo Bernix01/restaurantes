@@ -18,7 +18,11 @@ module.exports = {
         loader: "babel-loader",
         exclude: "/node_modules",
         options: {
-          presets: ["es2015", "react"]
+          presets: [
+            "es2015", "react"
+          ],
+          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
+
         }
       }, {
         test: /\.scss$/,
@@ -40,12 +44,10 @@ module.exports = {
   resolve: {
     // options for resolving module requests (does not apply to resolving to
     // loaders)
-
     modules: [
       "node_modules", path.resolve(__dirname, "src")
     ],
     // directories where to look for modules
-
     extensions: [".js", ".json", ".jsx", ".css", ".scss"]
   },
   performance: {
@@ -71,9 +73,11 @@ module.exports = {
     // ...
   },
 
+  devtool: 'inline-source-map',
   plugins: [
+    new webpack.ProvidePlugin({$: "jquery", jQuery: "jquery"}),
     // build optimization plugins
-    new webpack.DefinePlugin({'process.env.NODE_ENV': '"production"'}),
+    /*new webpack.DefinePlugin({'process.env.NODE_ENV': '"production"'}),
     new webpack
       .optimize
       .CommonsChunkPlugin({name: 'vendor', filename: 'vendor-[hash].min.js'}),
@@ -84,10 +88,9 @@ module.exports = {
           warnings: false,
           drop_console: false
         }
-      }),
+      }),*/
     new ExtractTextPlugin({filename: 'app-[hash].min.css', allChunks: true}),
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    // compile time plugins
+    //new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/), compile time plugins
     new CleanWebpackPlugin(['docs']),
     new HtmlWebpackPlugin({template: 'index.html', inject: 'body'}),
     // webpack-dev-server enhancement plugins

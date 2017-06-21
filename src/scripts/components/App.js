@@ -1,30 +1,32 @@
 import React from 'react'
+import {connect} from "react-redux"
 
-import SampleComponent from './SampleComponent'
+import Header from './Header'
+import Carousel from './Carousel'
+import Footer from './Footer'
 
-
-class App extends React.Component {
+@connect((store) => {
+  return {}
+})
+export default class App extends React.Component {
   constructor(props) {
     super(props)
   }
 
-  toggleTheme() {
-    const newTheme = this.props.theme === 'light' ? 'dark' : 'light'
-    this.props.dispatchThemeChange(newTheme)
-  }
-
   render() {
+    let images = [
+      {url:"http://via.placeholder.com/1850x550"},
+      {url:"http://via.placeholder.com/1856x550"},
+      {url:"http://via.placeholder.com/1852x550"},
+    ]
     return (
-      <div id='main' className={this.props.theme}>
-        <h1>This is my app component.</h1>
-        <h2>Theme: {this.props.theme}</h2>
-        <button onClick={this.toggleTheme.bind(this)}>
-          Change the Theme
-        </button>
-        <SampleComponent />
+      <div className="container-fluid">
+        <Header/>
+        <div className="row">
+        <Carousel images={images}/>
+        </div>
+        <Footer/>
       </div>
     )
   }
 }
-
-export default App
