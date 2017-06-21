@@ -9,11 +9,12 @@ export default class Restaurante extends React.Component {
   }
 
   render() {
-    let restaurant = {
-      name: "Celex",
+    let {facultad, restaurant} = this.props.match.params
+    let restaurantData = {
+      name: restaurant,
       img: "http://via.placeholder.com/1850x950",
       status: "Open",
-      facultad: "FCNM",
+      facultad: facultad,
       dscr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu" +
           "tate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit" +
           " elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris mo" +
@@ -169,27 +170,29 @@ export default class Restaurante extends React.Component {
       }
     }
     return (
-      <div className="container-fluid">
+      <div>
         <Header/>
-        <div class="jumbotron">
-          <div class="container">
-            <h1>{restaurant.name}</h1>
-            <p>{restaurant.dscr}</p>
-            <p>
-              <a class="btn btn-primary btn-lg">{restaurant.status}</a>
-            </p>
+        <div className="container-fluid">
+          <div class="jumbotron">
+            <div class="container">
+              <h1>{restaurantData.name}</h1>
+              <p>{restaurantData.facultad}</p>
+              <p>
+                <a class="btn btn-primary btn-lg">{restaurantData.status}</a>
+              </p>
+            </div>
           </div>
+          <div className="row">
+            <div className="col-sm-7 col-sm-offset-1">
+              <TimelineSemana semana={restaurantData.week}/>
+            </div>
+            <div className="col-sm-4">
+              <h2>Acerca de</h2>
+              <p>{restaurantData.dscr}</p>
+            </div>
+          </div>
+          <Footer/>
         </div>
-        <div className="row">
-          <div className="col-sm-7 col-sm-offset-1">
-            <TimelineSemana semana={restaurant.week}/>
-          </div>
-          <div className="col-sm-4">
-            <h2>Acerca de</h2>
-            <p>{restaurant.dscr}</p>
-          </div>
-        </div>
-        <Footer/>
       </div>
     )
   }
