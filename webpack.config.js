@@ -77,20 +77,20 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({$: "jquery", jQuery: "jquery"}),
     // build optimization plugins
-    /*new webpack.DefinePlugin({'process.env.NODE_ENV': '"production"'}),
-    new webpack
-      .optimize
-      .CommonsChunkPlugin({name: 'vendor', filename: 'vendor-[hash].min.js'}),
-    new webpack
-      .optimize
-      .UglifyJsPlugin({
-        compress: {
-          warnings: false,
-          drop_console: false
-        }
-      }),*/
+    // new webpack.DefinePlugin({'process.env.NODE_ENV': '"production"'}),
+    // new webpack
+    //   .optimize
+    //   .CommonsChunkPlugin({name: 'vendor', filename: 'vendor-[hash].min.js'}),
+    // new webpack
+    //   .optimize
+    //   .UglifyJsPlugin({
+    //     compress: {
+    //       warnings: false,
+    //       drop_console: false
+    //     }
+    //   }),
     new ExtractTextPlugin({filename: 'app-[hash].min.css', allChunks: true}),
-    //new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/), compile time plugins
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),// compile time plugins
     new CleanWebpackPlugin(['docs']),
     new HtmlWebpackPlugin({template: 'index.html', inject: 'body'}),
     // webpack-dev-server enhancement plugins

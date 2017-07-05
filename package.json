@@ -11,7 +11,9 @@
   },
   "author": "Bernix01 <gbernal096@gmail.com> (https://github.com/bernix01) and jlmasson <jlmasson@espol.edu.ec> (https://github.com/jlmasson)",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "material-design-color": "^2.3.2"
+  },
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",

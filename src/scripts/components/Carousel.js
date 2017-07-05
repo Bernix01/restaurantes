@@ -8,11 +8,17 @@ export default class Carousel extends React.Component {
     super(props)
   }
 
+  hola(){
+    alert("hola k ace")
+  }
+
   render() {
     let {images} = this.props
     console.log(images)
     return (
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div>
+        <p>{images.toString()}</p>
+      <div id="myCarousel" class="carousel slide" onClick={this.hola} data-ride="carousel">
         <ol class="carousel-indicators">
           {images.map((image, index) => {
             if (index == 0) 
@@ -46,6 +52,7 @@ export default class Carousel extends React.Component {
           <span class="glyphicon glyphicon-chevron-right"></span>
           <span class="sr-only">Next</span>
         </a>
+      </div>
       </div>
     )
   }
