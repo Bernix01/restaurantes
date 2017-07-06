@@ -1,0 +1,29 @@
+.info {
+    
+    margin: 20px 0;
+
+    .container {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .info-texto {
+
+            text-align: center;
+
+        }
+
+        .infobox {
+
+            .icono {
+                padding: 10px 0;
+                text-align: center;
+
+            }
+
+        }
+
+    }
+
+}

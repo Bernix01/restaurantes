@@ -3,6 +3,7 @@ import {connect} from "react-redux"
 
 import Header from './Header'
 import Info from './Info'
+import ConocerMas from './ConocerMas'
 import Carousel from './Carousel'
 import Footer from './Footer'
 
@@ -27,6 +28,7 @@ export default class App extends React.Component {
         <Carousel images={images}/>
         </div>
         <Info/>
+        <ConocerMas/>
         <Footer/>
       </div>
     )
