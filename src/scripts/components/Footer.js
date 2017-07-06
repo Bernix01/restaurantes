@@ -14,9 +14,18 @@ export default class Footer extends React.Component {
   render() {
     return (
       <footer>
-	      <div class="container">
-	      	I'm the footer.
-	      </div>
+	      <div className="container">
+                {/*<div className="col-md-6 info-autor">
+                    <p>Elaborado por:</p>
+                    <ul>
+                      <li>Guillermo Bernal</li>
+                      <li>José Luis Massón</li>
+                    </ul>
+                </div>*/}
+                <div className="col-md-12 derechos-reservados">
+                    <p>Todos los derechos reservados</p>
+                </div>
+            </div>
       </footer>
     )
   }

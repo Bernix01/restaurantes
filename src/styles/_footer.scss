@@ -1,0 +1,22 @@
+$bgFooter: #000000;
+$textColorFooter: #FFFFFF;
+
+footer {
+    
+    background-color: $bgFooter;
+    color: $textColorFooter;
+    padding: 20px 0;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .derechos-reservados {
+            text-align: right;
+            p {
+                margin: auto;
+            }
+        }
+    }
+    
+}
