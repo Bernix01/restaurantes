@@ -2,6 +2,7 @@ import 'jquery';
 import 'bootstrap-sass/assets/javascripts/bootstrap.js'
 import 'bootstrap-sass/assets/stylesheets/_bootstrap.scss'
 import '../styles/index.scss'
+import '../styles/font-awesome.scss'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'

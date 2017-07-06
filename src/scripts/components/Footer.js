@@ -13,7 +13,11 @@ export default class Footer extends React.Component {
 
   render() {
     return (
-      <footer>I'm the footer.</footer>
+      <footer>
+	      <div class="container">
+	      	I'm the footer.
+	      </div>
+      </footer>
     )
   }
 }

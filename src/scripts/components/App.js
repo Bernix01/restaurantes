@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from "react-redux"
 
 import Header from './Header'
+import Info from './Info'
 import Carousel from './Carousel'
 import Footer from './Footer'
 
@@ -20,11 +21,12 @@ export default class App extends React.Component {
       {url:"http://via.placeholder.com/1852x550"},
     ]
     return (
-      <div className="container-fluid">
+      <div>
         <Header/>
-        <div className="row">
+        <div className="row container-fluid">
         <Carousel images={images}/>
         </div>
+        <Info/>
         <Footer/>
       </div>
     )
