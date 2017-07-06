@@ -1,6 +1,7 @@
-import '../styles/index.scss'
 import 'jquery';
-import 'bootstrap-loader'
+import 'bootstrap-sass/assets/javascripts/bootstrap.js'
+import 'bootstrap-sass/assets/stylesheets/_bootstrap.scss'
+import '../styles/index.scss'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
