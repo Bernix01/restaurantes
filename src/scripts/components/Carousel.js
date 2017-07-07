@@ -17,7 +17,7 @@ export default class Carousel extends React.Component {
     console.log(images)
     return (
       <div>
-        <p>{images.toString()}</p>
+        {/*<p>{images.toString()}</p>*/}
       <div id="myCarousel" class="carousel slide" onClick={this.hola} data-ride="carousel">
         <ol class="carousel-indicators">
           {images.map((image, index) => {
