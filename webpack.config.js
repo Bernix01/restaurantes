@@ -36,7 +36,7 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           //resolve-url-loader may be chained before sass-loader if necessary
-          use: 'css-loader'
+          use: 'css-loader?url=false'
         })
       }, {
         // ASSET LOADER Reference: https://github.com/webpack/file-loader Copy png, jpg,
