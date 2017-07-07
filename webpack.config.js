@@ -32,6 +32,13 @@ module.exports = {
           use: ['css-loader', 'sass-loader']
         })
       }, {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          //resolve-url-loader may be chained before sass-loader if necessary
+          use: 'css-loader'
+        })
+      }, {
         // ASSET LOADER Reference: https://github.com/webpack/file-loader Copy png, jpg,
         // jpeg, gif, svg, woff, woff2, ttf, eot files to output Rename the file using
         // the asset hash Pass along the updated reference to your code You can add here
@@ -76,21 +83,13 @@ module.exports = {
   devtool: 'inline-source-map',
   plugins: [
     new webpack.ProvidePlugin({$: "jquery", jQuery: "jquery"}),
-    // build optimization plugins
-    // new webpack.DefinePlugin({'process.env.NODE_ENV': '"production"'}),
-    // new webpack
-    //   .optimize
-    //   .CommonsChunkPlugin({name: 'vendor', filename: 'vendor-[hash].min.js'}),
-    // new webpack
-    //   .optimize
-    //   .UglifyJsPlugin({
-    //     compress: {
-    //       warnings: false,
-    //       drop_console: false
-    //     }
-    //   }),
+    // build optimization plugins new webpack.DefinePlugin({'process.env.NODE_ENV':
+    // '"production"'}), new webpack   .optimize   .CommonsChunkPlugin({name:
+    // 'vendor', filename: 'vendor-[hash].min.js'}), new webpack   .optimize
+    // .UglifyJsPlugin({     compress: {       warnings: false,       drop_console:
+    // false     }   }),
     new ExtractTextPlugin({filename: 'app-[hash].min.css', allChunks: true}),
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),// compile time plugins
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/), // compile time plugins
     new CleanWebpackPlugin(['docs']),
     new HtmlWebpackPlugin({template: 'index.html', inject: 'body'}),
     // webpack-dev-server enhancement plugins
