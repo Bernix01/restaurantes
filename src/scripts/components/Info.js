@@ -1,7 +1,7 @@
 import 'jquery'
 import React from 'react'
 import {connect} from "react-redux"
-import '../actions/gallery'
+// import '../actions/gallery'
 
 @connect((store) => {
   return {}
@@ -13,13 +13,8 @@ class Info extends React.Component {
   render() {
     return(
         <section className="info">
-          <div id="gallery">
-            <a href="https://www.python.org/static/opengraph-icon-200x200.png"> 
-              <img src="https://www.python.org/static/opengraph-icon-200x200.png" title="photo1 title"/>
-            </a>
-          </div>
           
-          {/*<div className="container">
+          <div className="container">
             <div className="info-texto">
               <h1>Encuéntralo en un solo clic</h1>
               <p>
@@ -79,7 +74,7 @@ class Info extends React.Component {
               </div>
             </div>
 
-          </div>*/}
+          </div>
           {/*<div id="gallery'>
             <a href="http://www.somedomain.com/images/image1_large.jpg">
               <img src="http://www.somedomain.com/images/image1_small.jpg" title="photo1 title">

@@ -1,10 +1,12 @@
+import 'jquery'
 import React from 'react'
 import {connect} from "react-redux"
+// import '../actions/gallery'
 
 @connect((store) => {
   return {}
 })
-class ConocerMas extends React.Component {
+class MasInfo extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -14,7 +16,7 @@ class ConocerMas extends React.Component {
           
             <div className="container">
                 <div className="info-texto">
-                <h1>Conoce más de ellos</h1>
+                <h1>Acerca De</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Perspiciatis dolores optio quisquam autem sed sequi reprehenderit officia laborum. 
@@ -35,4 +37,4 @@ class ConocerMas extends React.Component {
   }
 }
 
-export default ConocerMas
+export default MasInfo

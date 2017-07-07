@@ -1,10 +1,12 @@
 import React from 'react'
 import {connect} from "react-redux"
 
-import '../actions/gallery'
+// import '../actions/gallery'
 import Header from './Header'
 import Info from './Info'
+import Gallery from './Gallery'
 import ConocerMas from './ConocerMas'
+import MasInfo from './MasInfo'
 import Carousel from './Carousel'
 import Footer from './Footer'
 
@@ -30,6 +32,8 @@ export default class App extends React.Component {
         </div>
         <Info/>
         <ConocerMas/>
+        <MasInfo/>
+        {/*<Gallery/>*/}
         <Footer/>
       </div>
     )
