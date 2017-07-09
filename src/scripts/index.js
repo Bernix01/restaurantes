@@ -24,6 +24,7 @@ import reducers from './reducers'
 import App from './components/App'
 import Facultad from './components/Facultad'
 import AcercaDe from './components/AcercaDe'
+import Cartelera from './components/Cartelera'
 import Login from './components/Login'
 import Restaurant from './components/Restaurante'
 
@@ -43,6 +44,7 @@ ReactDOM.render(
       <Route exact path="/" component={App}/>
       <Route exact path="/facultades" component={Facultad}/>
       <Route exact path="/acerca-de" component={AcercaDe}/>
+      <Route exact path="/cartelera" component={Cartelera}/>
       <Route exact path="/facultades/:facultad/:restaurant" component={Restaurant}/>
       <Route exact path="/iniciar-sesion" component={Login}/>
     </div>
