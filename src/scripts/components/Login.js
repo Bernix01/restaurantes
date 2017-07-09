@@ -3,7 +3,7 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
-export default class Facultad extends React.Component {
+export default class Login extends React.Component {
   constructor(props) {
     super(props)
   }

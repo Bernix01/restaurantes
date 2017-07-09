@@ -3,7 +3,7 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
-export default class Facultad extends React.Component {
+export default class AcercaDe extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -178,7 +178,7 @@ export default class Facultad extends React.Component {
       <div>
         <Header/>
         <div className="container-fluid">
-          {facultadData.map((facultad, index) => {
+          {/*{facultadData.map((facultad, index) => {
             let restaurants = facultad
               .restaurants
               .map((restaurant, index) => {
@@ -199,7 +199,7 @@ export default class Facultad extends React.Component {
                 </div>
               </div>
             )
-          })}
+          })}*/}
         </div>
         <Footer/>
       </div>

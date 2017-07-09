@@ -23,6 +23,8 @@ import {ConnectedRouter, push, routerMiddleware} from 'react-router-redux'
 import reducers from './reducers'
 import App from './components/App'
 import Facultad from './components/Facultad'
+import AcercaDe from './components/AcercaDe'
+import Login from './components/Login'
 import Restaurant from './components/Restaurante'
 
 const $app = document.getElementById('app')
@@ -40,7 +42,9 @@ ReactDOM.render(
     <div>
       <Route exact path="/" component={App}/>
       <Route exact path="/facultades" component={Facultad}/>
+      <Route exact path="/acerca-de" component={AcercaDe}/>
       <Route exact path="/facultades/:facultad/:restaurant" component={Restaurant}/>
+      <Route exact path="/iniciar-sesion" component={Login}/>
     </div>
   </ConnectedRouter>
 </Provider>, $app)

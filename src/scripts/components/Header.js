@@ -23,7 +23,7 @@ class Header extends React.Component {
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Restaurantes</a>
+          <a class="navbar-brand" href="/">Restaurantes</a>
         </div>
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -35,10 +35,10 @@ class Header extends React.Component {
               <a href="/cartelera">Cartelera</a>
             </li>
             <li>
-              <a href="#">Acerca de</a>
+              <a href="/acerca-de">Acerca de</a>
             </li>
             <li>
-              <a href="#">Iniciar sesión</a>
+              <a href="/iniciar-sesion">Iniciar sesión</a>
             </li>
           </ul>
           <form class="navbar-form navbar-left" role="search">
