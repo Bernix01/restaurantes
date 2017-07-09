@@ -178,14 +178,42 @@ export default class Facultad extends React.Component {
       <div>
         <Header page={this.props.location.pathname}/>
         <div class="container">
-            <form action="" class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
-                <img src={"http://via.placeholder.com/300x300"} alt="Avatar" class="avatar"/>
-                <input class="user" type="text" placeholder="Usuario" name="username" required/>
-                <input class="pass" type="password" placeholder="Contraseña" name="password" required/>
+            <div class="row">
+                <div class="Absolute-Center is-Responsive">
+                    <div class="col-xl-4 col-xl-offset-4 col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2">
+                        <form action="" className="formulario">
 
-                <button type="submit" class="btn btn-success">Login</button>
-                <input type="checkbox" checked="checked"/> Recordarme
-            </form>
+                            <div id="logo-container"></div>
+                            {/*<img src={"http://via.placeholder.com/300x300"} alt="Avatar" class="avatar"/>*/}
+
+                            <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input class="form-control" type="text" name='username' placeholder="Usuario" required/>
+                            </div>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                <input class="form-control" type="password" placeholder="Contraseña" name="password" required/>
+                            </div>
+
+                            <div class="checkbox">
+                                <label>
+                                <input type="checkbox"/> Recordarme
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success btn-block">Login</button>
+                            </div>
+                            <div class="form-group text-center">
+                                <a href="#">¿Ha olvidado su contraseña?</a>
+                            </div>
+
+                            
+                            {/*<input type="checkbox" checked="checked"/> Recordarme*/}
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
         </div>
         {/*<div className="container-fluid">
           {facultadData.map((facultad, index) => {
