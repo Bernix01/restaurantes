@@ -14,7 +14,7 @@ export default class Facultad extends React.Component {
   }
   
   componentDidMount() {
-    axios.get("../data/facultades.json")
+    axios.get("https://raw.githubusercontent.com/Bernix01/restaurantes/master/src/data/facultades.json")
       .then(res => {
         const posts = res.data.data.children.map(obj => obj.data);
         this.setState({ posts });

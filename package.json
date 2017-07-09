@@ -12,6 +12,7 @@
   "author": "Bernix01 <gbernal096@gmail.com> (https://github.com/bernix01) and jlmasson <jlmasson@espol.edu.ec> (https://github.com/jlmasson)",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.16.2",
     "material-design-color": "^2.3.2"
   },
   "devDependencies": {
