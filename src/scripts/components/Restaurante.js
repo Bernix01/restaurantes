@@ -171,7 +171,7 @@ export default class Restaurante extends React.Component {
     }
     return (
       <div>
-        <Header/>
+        <Header page={this.props.location.pathname}/>
         <div className="container-fluid">
           <div class="jumbotron">
             <div class="container">

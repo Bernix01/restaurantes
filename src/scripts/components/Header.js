@@ -28,16 +28,16 @@ class Header extends React.Component {
 
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
-            <li class="active">
+            <li className={ this.props.page == '/facultades' ? 'active' : '' }>
               <a href="/facultades">Facultades</a>
             </li>
-            <li>
+            <li className={ this.props.page == '/cartelera' ? 'active' : '' }>
               <a href="/cartelera">Cartelera</a>
             </li>
-            <li>
+            <li className={ this.props.page == '/acerca-de' ? 'active' : '' }>
               <a href="/acerca-de">Acerca de</a>
             </li>
-            <li>
+            <li className={ this.props.page == '/iniciar-sesion' ? 'active' : '' }>
               <a href="/iniciar-sesion">Iniciar sesión</a>
             </li>
           </ul>
