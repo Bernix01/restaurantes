@@ -16,13 +16,13 @@ export default class Facultad extends React.Component {
   componentDidMount() {
     axios.get("https://raw.githubusercontent.com/Bernix01/restaurantes/master/src/data/facultades.json")
       .then(res => {
-        const posts = res.data.data.children.map(obj => obj.data);
-        this.setState({ posts });
+        const facultadData = res.data
+        this.setState({ facultadData });
       });
   }
   
   render() {
-    let facultadData = this.props.facultadData
+    let facultadData = this.state.facultadData
     // let facultadData = [
     //   {
     //     name: "FCNM",
