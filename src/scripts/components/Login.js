@@ -178,7 +178,7 @@ export default class Facultad extends React.Component {
       <div>
         <Header page={this.props.location.pathname}/>
         <div class="container">
-            <form action="" class="col-md-4 col-md-offset-4">
+            <form action="" class="col-md-4 col-md-offset-4 col-xs-6 col-xs-offset-3">
                 <img src={"http://via.placeholder.com/300x300"} alt="Avatar" class="avatar"/>
                 <input class="user" type="text" placeholder="Usuario" name="username" required/>
                 <input class="pass" type="password" placeholder="Contraseña" name="password" required/>

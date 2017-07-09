@@ -1,6 +1,7 @@
 /* Bordered form */
 form {
     border: 3px solid #f1f1f1;
+    margin-bottom: 20px;
 }
 
 /* Full-width inputs */
@@ -11,6 +12,7 @@ form {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    border-radius: 4px;
 }
 
 /* Set a style for all buttons */
@@ -43,6 +45,7 @@ form {
 
 /* Avatar image */
 img {
+    width: 60%;
     display: block;
     margin: auto;
     &.avatar {
