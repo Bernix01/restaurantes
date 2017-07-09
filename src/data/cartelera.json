@@ -1,0 +1,21 @@
+{
+    "mas-votados":[
+        {
+            "nombre-plato": "Encebollado",
+            "restaurante": "COCA COLA",
+            "img" : "http://via.placeholder.com/200x130",
+            "fecha" : "Martes 4",
+            "likes" : 54
+
+        },
+        {
+            "nombre-plato": "Arroz con pollo",
+            "restaurante": "CELEX",
+            "img" : "http://via.placeholder.com/200x130",
+            "fecha" : "Jueves 6",
+            "likes" : 61
+        }
+        
+    ],
+    "esta-semana":[]
+}
