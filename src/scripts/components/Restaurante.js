@@ -14,6 +14,8 @@ export default class Restaurante extends React.Component {
       name: restaurant,
       img: "http://via.placeholder.com/1850x950",
       status: "Open",
+      lat:"-2.1468555",
+      lng:"-79.9653056",
       facultad: facultad,
       dscr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu" +
           "tate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit" +
@@ -169,6 +171,7 @@ export default class Restaurante extends React.Component {
         ]
       }
     }
+    console.log(restaurant)
     return (
       <div>
         <Header page={this.props.location.pathname}/>
@@ -176,6 +179,10 @@ export default class Restaurante extends React.Component {
           <div class="jumbotron">
             <div class="container">
               <h1>{restaurantData.name}</h1>
+              <img
+                src={`https://maps.googleapis.com/maps/api/staticmap?center=${restaurantData.lat},${restaurantData.lng}&zoom=17&size=300x200&maptype=roadmap&markers=color:blue%7Clabel:${restaurantData.name}%7C${restaurantData.lat},${restaurantData.lng}&key=AIzaSyBwqTWpZhU7AGPygyv7KYWQUdFSG2ALgGI`}
+                className="pull-right"
+                alt=""/>
               <p>{restaurantData.facultad}</p>
               <p>
                 <a class="btn btn-primary btn-lg">{restaurantData.status}</a>

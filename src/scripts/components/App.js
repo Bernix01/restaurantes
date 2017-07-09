@@ -32,9 +32,8 @@ export default class App extends React.Component {
     return (
       <div>
         <Header page={this.props.location.pathname}/>
-        <div className="row container-fluid">
+        <div className="container-fluid">
         <Carousel images={images}/>
-        </div>
         <Info/>
         <ConocerMas/>
         <MasInfo/>
@@ -42,6 +41,7 @@ export default class App extends React.Component {
         <Gallery images={images2}/>
         <p> Después </p>
         <Footer/>
+        </div>
       </div>
     )
   }

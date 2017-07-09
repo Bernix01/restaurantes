@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 import Header from './Header'
 import Footer from './Footer'
@@ -184,9 +185,11 @@ export default class Facultad extends React.Component {
               .map((restaurant, index) => {
                 return (
                   <div className="col-sm-3">
-                    <img src={restaurant.img} alt=""/>
-                    <h4>{restaurant.name}</h4>
-                    <p>{restaurant.status}</p>
+                    <a href={`/facultades/${facultad.name}/${restaurant.name}`}>
+                      <img src={restaurant.img} className="img-responsive" alt=""/>
+                      <h4>{restaurant.name}</h4>
+                      <p>{restaurant.status}</p>
+                    </a>
                   </div>
                 )
               })
