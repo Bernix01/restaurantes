@@ -1,7 +1,32 @@
 /* Bordered form */
+
+.Absolute-Center {
+    margin: auto;
+    position: absolute;
+    top: 50px; left: 0; bottom: 0; right: 0;
+}
+
+.Absolute-Center.is-Responsive {
+    height: 50%;
+}
+
+#logo-container{
+    margin: auto;
+    margin-bottom: 10px;
+    width:200px;
+    height:30px;
+    background-image:url('http://placehold.it/200x30/000000/ffffff/&text=BRAND+LOGO');
+}
+
 form {
     border: 3px solid #f1f1f1;
     margin-bottom: 20px;
+}
+
+.formulario {
+
+    padding: 20px 10px 20px;
+
 }
 
 /* Full-width inputs */
@@ -44,15 +69,15 @@ form {
 // }
 
 /* Avatar image */
-img {
-    width: 60%;
-    display: block;
-    margin: auto;
-    &.avatar {
-        border-radius: 50%;
-    }
+// img {
+//     width: 60%;
+//     display: block;
+//     margin: auto;
+//     &.avatar {
+//         border-radius: 50%;
+//     }
 
-}
+// }
 
 /* Add padding to containers */
 // .container {
@@ -74,4 +99,14 @@ img {
 //     .cancelbtn {
 //         width: 100%;
 //     }
+// }
+
+// @media screen and (min-width: 1024px) {
+
+//     .Absolute-Center.is-Responsive {
+        
+//         width: 70%;
+    
+//     }
+
 // }
