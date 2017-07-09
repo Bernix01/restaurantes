@@ -176,38 +176,18 @@ export default class Facultad extends React.Component {
     // ]
     return (
       <div>
-<<<<<<< HEAD
-        <Header/>
-        <div class="login">
-            <form action="">
-                <p> Hola Mundo </p>
-                {/*<div className="imgcontainer">
-                    <img src="http://via.placeholder.com/300x300" alt="Avatar" class="avatar"/>
-                </div>*/}
-{/*
-                <div class="container">
-                    <label><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required/>
+        <Header page={this.props.location.pathname}/>
+        <div class="container">
+            <form action="" class="col-md-4 col-md-offset-4">
+                <img src={"http://via.placeholder.com/300x300"} alt="Avatar" class="avatar"/>
+                <input class="user" type="text" placeholder="Usuario" name="username" required/>
+                <input class="pass" type="password" placeholder="Contraseña" name="password" required/>
 
-                    <label><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required/>
-
-                    <button type="submit">Login</button>
-                    <input type="checkbox" checked="checked"/> Remember me
-                </div>
-
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
-                </div>*/}
+                <button type="submit" class="btn btn-success">Login</button>
+                <input type="checkbox" checked="checked"/> Recordarme
             </form>
         </div>
-        
         {/*<div className="container-fluid">
-=======
-        <Header page={this.props.location.pathname}/>
-        <div className="container-fluid">
->>>>>>> 9a1b5035655e53a565444c4196ebdc773e6c8cac
           {facultadData.map((facultad, index) => {
             let restaurants = facultad
               .restaurants
@@ -230,7 +210,7 @@ export default class Facultad extends React.Component {
               </div>
             )
           })}
-        </div>*/}
+        </div>}*/}
         <Footer/>
       </div>
     )
