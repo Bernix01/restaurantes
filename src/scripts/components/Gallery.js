@@ -58,7 +58,6 @@ class Gallery extends Component {
 		if (!images) return;
 
 		const gallery = images.filter(i => i.useForDemo).map((obj, i) => {
-            console.log(obj.src)
 			return (
 				<a
 					href={obj.src}
@@ -78,7 +77,6 @@ class Gallery extends Component {
 		);
 	}
 	render () {
-        console.log(this.props.images)
 		return (
 			<div className="section">
 				{this.props.heading && <h2>{this.props.heading}</h2>}
