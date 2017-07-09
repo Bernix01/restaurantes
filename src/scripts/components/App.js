@@ -24,6 +24,11 @@ export default class App extends React.Component {
       {url:"http://via.placeholder.com/1856x550"},
       {url:"http://via.placeholder.com/1852x550"},
     ]
+    let images2 = [
+      {src:"http://via.placeholder.com/1850x550"},
+      {src:"http://via.placeholder.com/1856x550"},
+      {src:"http://via.placeholder.com/1852x550"},
+    ]
     return (
       <div>
         <Header/>
@@ -33,7 +38,9 @@ export default class App extends React.Component {
         <Info/>
         <ConocerMas/>
         <MasInfo/>
-        <Gallery/>
+        <p> Antes </p>
+        <Gallery images={images2}/>
+        <p> Después </p>
         <Footer/>
       </div>
     )
