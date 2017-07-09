@@ -176,7 +176,7 @@ export default class Facultad extends React.Component {
     ]
     return (
       <div>
-        <Header/>
+        <Header page={this.props.location.pathname}/>
         <div className="container-fluid">
           {facultadData.map((facultad, index) => {
             let restaurants = facultad
