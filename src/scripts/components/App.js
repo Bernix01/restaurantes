@@ -33,7 +33,7 @@ export default class App extends React.Component {
         <Info/>
         <ConocerMas/>
         <MasInfo/>
-        {/*<Gallery/>*/}
+        <Gallery/>
         <Footer/>
       </div>
     )
