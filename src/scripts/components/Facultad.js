@@ -9,10 +9,10 @@ import Footer from './Footer'
 
 const Mapa = withGoogleMap(props => (
   <GoogleMap
-    defaultZoom={3}
+    defaultZoom={15}
     defaultCenter={{
-    lat: 25.0391667,
-    lng: 121.525
+    lat: -2.1481458,
+    lng: -79.9644885
   }}>
     <MarkerClusterer averageCenter enableRetinaIcons gridSize={60}>
       {props
@@ -54,21 +54,17 @@ export default class Facultad extends React.Component {
         if (i == 1) {
           let a = []
           a = a.concat(curr.restaurants)
-          console.log("a", a)
           return a
         }
-
         let b = prev.concat(curr.restaurants)
-        console.log(b)
         return b
       })
     }
-    console.log("markers", markers)
     let container = <div style={{
-      height: `100%`
+      height: `700px`
     }}/>
     let mapElem = <div style={{
-      height: `100%`
+      height: `600px`
     }}/>
     if (facultadData) 
       return (
