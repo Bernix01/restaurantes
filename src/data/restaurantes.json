@@ -1,0 +1,458 @@
+[
+    {
+      "name": "CELEX",
+      "img": "http://via.placeholder.com/1850x950",
+      "status": "Open",
+      "lat":"-2.1468555",
+      "lng":"-79.9653056",
+      "facultad": "FCNM",
+      "dscr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu tate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris mo lestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iac ulis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, veh icula eu diam. Pellentesque rhoncus aliquam mattis.",
+      "week": {
+        "days": [
+          {
+            "date": "Lunes",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Martes",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Miercoles",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Jueves",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Viernes",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Sabado",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "COCA COLA",
+      "img": "http://via.placeholder.com/1850x950",
+      "status": "Open",
+      "lat":"-2.14599519",
+      "lng":"-79.96305861",
+      "facultad": "FCNM",
+      "dscr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu tate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris mo lestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iac ulis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, veh icula eu diam. Pellentesque rhoncus aliquam mattis.",
+      "week": {
+        "days": [
+          {
+            "date": "Lunes",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Martes",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Miercoles",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Jueves",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Viernes",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Sabado",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "COCA COLA",
+      "img": "http://via.placeholder.com/1850x950",
+      "status": "Open",
+      "lat":"-2.14839456",
+      "lng":"-79.9609991",
+      "facultad": "FCNM",
+      "dscr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu tate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris mo lestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iac ulis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, veh icula eu diam. Pellentesque rhoncus aliquam mattis.",
+      "week": {
+        "days": [
+          {
+            "date": "Lunes",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Martes",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Miercoles",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Jueves",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Viernes",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }, {
+            "date": "Sabado",
+            "menus": [
+              {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }, {
+                "img": "http://via.placeholder.com/200x130",
+                "dscr": "Well prepared food!"
+              }
+            ]
+          }
+        ]
+      }
+    }
+]
