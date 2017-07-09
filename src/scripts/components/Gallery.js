@@ -58,6 +58,7 @@ class Gallery extends Component {
 		if (!images) return;
 
 		const gallery = images.filter(i => i.useForDemo).map((obj, i) => {
+            console.log(obj.src)
 			return (
 				<a
 					href={obj.src}
