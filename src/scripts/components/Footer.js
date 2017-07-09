@@ -13,7 +13,7 @@ export default class Footer extends React.Component {
 
   render() {
     return (
-      <footer>
+      <footer class="navbar-fixed-bottom">
 	      <div className="container">
                 {/*<div className="col-md-6 info-autor">
                     <p>Elaborado por:</p>
