@@ -80,7 +80,7 @@ export default class Restaurante extends React.Component {
       return (
         <div>
           <Header page={this.props.location.pathname}/>
-          <div className="container-fluid">
+          <div className="container-fluid main">
             <div class="jumbotron">
               <div class="container">
                 <h1>{restaurantData.name}</h1>
