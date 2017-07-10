@@ -32,13 +32,13 @@ export default class Carousel extends React.Component {
             if(index == 0)
             return (
               <div class="item active" key={index}>
-                <img src={image.url} alt=""/>
+                <img src={image.url} alt={index}/>
               </div>
             )
             console.log(image.url)
             return (
               <div class="item" key={index}>
-                <img src={image.url} alt=""/>
+                <img src={image.url} alt={index}/>
               </div>
             )
           })}
