@@ -3,8 +3,8 @@
       "name": "CELEX",
       "img": "http://via.placeholder.com/1850x950",
       "status": "Open",
-      "latitude":"-2.1468555",
-      "longitude":"-79.9653056",
+      "latitude":-2.1468555,
+      "longitude":-79.9653056,
       "facultad": "FCNM",
       "dscr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu tate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris mo lestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iac ulis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, veh icula eu diam. Pellentesque rhoncus aliquam mattis.",
       "week": {
@@ -155,8 +155,8 @@
       "name": "COCA COLA",
       "img": "http://via.placeholder.com/1850x950",
       "status": "Open",
-      "latitude":"-2.14599519",
-      "longitude":"-79.96305861",
+      "latitude":-2.14599519,
+      "longitude":-79.96305861,
       "facultad": "FCNM",
       "dscr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu tate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris mo lestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iac ulis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, veh icula eu diam. Pellentesque rhoncus aliquam mattis.",
       "week": {
@@ -307,8 +307,8 @@
       "name": "COCA COLA",
       "img": "http://via.placeholder.com/1850x950",
       "status": "Open",
-      "latitude":"-2.14839456",
-      "longitude":"-79.9609991",
+      "latitude":-2.14839456,
+      "longitude":-79.9609991,
       "facultad": "FCNM",
       "dscr": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu tate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris mo lestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iac ulis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, veh icula eu diam. Pellentesque rhoncus aliquam mattis.",
       "week": {
