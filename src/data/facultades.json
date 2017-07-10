@@ -8,7 +8,7 @@
             "longitude": -79.96629787,
             "name": "CELEX",
             "status": "Open",
-            "img": "http://via.placeholder.com/300x300",
+            "img": "http://via.placeholder.com/500x500",
             "likes": 22,
             "liked": true
           }, {
@@ -16,7 +16,7 @@
             "longitude": -79.96521124,
             "name": "COCA COLA",
             "status": "Open",
-            "img": "http://via.placeholder.com/300x300",
+            "img": "http://via.placeholder.com/500x500",
             "likes": 22,
             "liked": true
           }, {
@@ -24,7 +24,7 @@
             "longitude": -79.96289511,
             "name": "CELEX",
             "status": "Open",
-            "img": "http://via.placeholder.com/300x300",
+            "img": "http://via.placeholder.com/500x500",
             "likes": 22,
             "liked": true
           }
@@ -38,7 +38,7 @@
             "longitude": -79.96637959,
             "name": "CELEX",
             "status": "Open",
-            "img": "http://via.placeholder.com/300x300",
+            "img": "http://via.placeholder.com/500x500",
             "likes": 22,
             "liked": true
           }, {
@@ -46,7 +46,7 @@
             "longitude": -79.96305861,
             "name": "COCA COLA",
             "status": "Open",
-            "img": "http://via.placeholder.com/300x300",
+            "img": "http://via.placeholder.com/500x500",
             "likes": 22,
             "liked": true
           }, {
@@ -54,7 +54,7 @@
             "longitude": -79.9609991,
             "name": "CELEX",
             "status": "Open",
-            "img": "http://via.placeholder.com/300x300",
+            "img": "http://via.placeholder.com/500x500",
             "likes": 22,
             "liked": true
           }
@@ -68,15 +68,15 @@
             "longitude": -79.96369803,
             "name": "CELEX",
             "status": "Open",
-            "img": "http://via.placeholder.com/300x300",
-            "likes": 22,
+            "img": "http://via.placeholder.com/500x500",
+            "likes": 20,
             "liked": true
           }, {
             "latitude": -2.14864312,
             "longitude": -79.96736443,
             "name": "COCA COLA",
             "status": "Open",
-            "img": "http://via.placeholder.com/300x300",
+            "img": "http://via.placeholder.com/500x500",
             "likes": 22,
             "liked": true
           }, {
@@ -84,7 +84,7 @@
             "longitude": -79.96136477,
             "name": "CELEX",
             "status": "Open",
-            "img": "http://via.placeholder.com/300x300",
+            "img": "http://via.placeholder.com/500x500",
             "likes": 22,
             "liked": true
           }
@@ -98,7 +98,7 @@
             "longitude": -79.96539643,
             "name": "CELEX",
             "status": "Open",
-            "img": "http://via.placeholder.com/300x300",
+            "img": "http://via.placeholder.com/500x500",
             "likes": 22,
             "liked": true
           }, {
@@ -106,7 +106,7 @@
             "longitude": -79.96311542,
             "name": "COCA COLA",
             "status": "Open",
-            "img": "http://via.placeholder.com/300x300",
+            "img": "http://via.placeholder.com/500x500",
             "likes": 22,
             "liked": true
           }, {
@@ -114,7 +114,7 @@
             "longitude": -79.96715294,
             "name": "CELEX",
             "status": "Open",
-            "img": "http://via.placeholder.com/300x300",
+            "img": "http://via.placeholder.com/500x500",
             "likes": 22,
             "liked": true
           }
