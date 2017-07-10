@@ -82,7 +82,7 @@ export default class Restaurante extends React.Component {
           <Header page={this.props.location.pathname}/>
           <div className="container-fluid main">
             <div class="jumbotron">
-              <div class="container">
+              <div class="container-fluid">
                 <h1>{restaurantData.name}</h1>
                 <img
                   src={`https://maps.googleapis.com/maps/api/staticmap?center=${restaurantData.lat},${restaurantData.lng}&zoom=17&size=300x200&maptype=roadmap&markers=color:blue%7Clabel:${restaurantData.name}%7C${restaurantData.lat},${restaurantData.lng}&key=AIzaSyBwqTWpZhU7AGPygyv7KYWQUdFSG2ALgGI`}
