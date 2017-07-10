@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import { css, StyleSheet } from 'aphrodite/no-important';
 import Lightbox from 'react-images';
 
-class Gallery extends Component {
+export default class Gallery extends Component {
 	constructor () {
 		super();
-
+    console.log("hoola")
 		this.state = {
 			lightboxIsOpen: false,
 			currentImage: 0,
@@ -53,11 +53,13 @@ class Gallery extends Component {
 		this.gotoNext();
 	}
 	renderGallery () {
+    console.log("renderizando ando")
 		const { images } = this.props;
-
+    console.log("iansda",images)
 		if (!images) return;
-
-		const gallery = images.filter(i => i.useForDemo).map((obj, i) => {
+    console.log("filtrando ando")
+		const gallery = images.map((obj, i) => {
+      console.log("filtro!")
 			return (
 				<a
 					href={obj.src}
@@ -69,7 +71,6 @@ class Gallery extends Component {
 				</a>
 			);
 		});
-
 		return (
 			<div className={css(classes.gallery)}>
 				{gallery}
@@ -77,6 +78,7 @@ class Gallery extends Component {
 		);
 	}
 	render () {
+    console.log("ve")
 		return (
 			<div className="section">
 				{this.props.heading && <h2>{this.props.heading}</h2>}
@@ -91,8 +93,7 @@ class Gallery extends Component {
 					onClickPrev={this.gotoPrevious}
 					onClickThumbnail={this.gotoImage}
 					onClose={this.closeLightbox}
-					showThumbnails={this.props.showThumbnails}
-					theme={this.props.theme}
+					
 				/>
 			</div>
 		);
@@ -159,5 +160,3 @@ const classes = StyleSheet.create({
 		width: 'auto',
 	},
 });
-
-export default Gallery;
