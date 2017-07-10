@@ -9169,10 +9169,6 @@ body {
   right: 1.5em;
   top: 0.5em; }
 
-@media screen and (min-width: 1375px) {
-  .likes {
-    right: 5em; } }
-
 @media screen and (min-width: 768px) and (max-width: 840px) {
   #app > div > div > .container-fluid {
     padding-top: 123px; } }
@@ -9183,7 +9179,8 @@ body {
     text-align: center; }
   .info .infobox .icono {
     padding: 10px 0;
-    text-align: center; }
+    text-align: center;
+    color: #f44336; }
 
 /* Bordered form */
 .Absolute-Center {
@@ -11601,4 +11598,4 @@ footer {
   overflow: visible;
   clip: auto; }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtOTg0YWQxZDI2MTJmMWVlYTM5ZDMubWluLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtY2I0YTE2ZmRkM2JjNTMwNDgwNDkubWluLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
