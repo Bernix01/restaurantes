@@ -12,7 +12,9 @@
   },
   "author": "Bernix01 <gbernal096@gmail.com> (https://github.com/bernix01) and jlmasson <jlmasson@espol.edu.ec> (https://github.com/jlmasson)",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.15.3"
+  },
   "devDependencies": {
     "axios": "^0.16.2",
     "babel-cli": "^6.24.1",
