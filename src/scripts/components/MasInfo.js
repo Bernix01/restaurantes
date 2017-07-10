@@ -26,7 +26,7 @@ class MasInfo extends React.Component {
             </div>
 
             <div className="container">
-                <a class="btn btn-primary" href="#">
+                <a class="btn btn-primary" href="/acerca-de">
                     ¡Hazlo ya!
                 </a>
             </div>

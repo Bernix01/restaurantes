@@ -12,25 +12,24 @@ class Info extends React.Component {
   }
   render() {
     return(
-        <section className="info">
-          
-          <div className="container">
-            <div className="info-texto">
-              <h1>Encuéntralo en un solo clic</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Perspiciatis dolores optio quisquam autem sed sequi reprehenderit officia laborum. 
-                Voluptas asperiores totam magni, hic eaque perferendis facilis labore quo repudiandae quod.
-              </p>
-            </div>
+        <section className="row info">
+
+          <div className="col-md-6 col-md-offset-3">
+            <h1 class="info-texto">Encuéntralo en un solo clic</h1>
+            <p class="info-texto">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Perspiciatis dolores optio quisquam autem sed sequi reprehenderit officia laborum. 
+              Voluptas asperiores totam magni, hic eaque perferendis facilis labore quo repudiandae quod.
+            </p>
           </div>
 
-          <div className="container">
-            <div className="col-md-3 infobox">
+          <div className="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+            
+            <div className="col-md-3 col-sm-6 infobox">
               <div className="icono">
                 <i class="fa fa-clock-o fa-2x" aria-hidden="true"></i>
               </div>
-              <div className="texto-icono">
+              <div className="info-texto">
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                 Consequatur, fuga nobis accusamus labore rem dignissimos repellendus debitis incidunt odio molestias omnis, 
                 necessitatibus eveniet modi cupiditate amet, officia quis itaque similique. 
@@ -38,11 +37,11 @@ class Info extends React.Component {
               </div>  
             </div>
             
-            <div className="col-md-3 infobox">
+            <div className="col-md-3 col-sm-6 infobox">
               <div className="icono">
                 <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
               </div>
-              <div className="texto-icono">
+              <div className="info-texto">
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                 Consequatur, fuga nobis accusamus labore rem dignissimos repellendus debitis incidunt odio molestias omnis, 
                 necessitatibus eveniet modi cupiditate amet, officia quis itaque similique. 
@@ -50,11 +49,11 @@ class Info extends React.Component {
               </div>
             </div>
 
-            <div className="col-md-3 infobox">
+            <div className="col-md-3 col-sm-6 infobox">
               <div className="icono">
                 <i class="fa fa-search fa-2x" aria-hidden="true"></i>
               </div>
-              <div className="texto-icono">
+              <div className="info-texto">
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                 Consequatur, fuga nobis accusamus labore rem dignissimos repellendus debitis incidunt odio molestias omnis, 
                 necessitatibus eveniet modi cupiditate amet, officia quis itaque similique. 
@@ -62,24 +61,19 @@ class Info extends React.Component {
               </div>
             </div>
 
-            <div className="col-md-3 infobox">
+            <div className="col-md-3 col-sm-6 infobox">
               <div className="icono">
                 <i class="fa fa-map fa-2x" aria-hidden="true"></i>
               </div>
-              <div className="texto-icono">
+              <div className="info-texto">
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                 Consequatur, fuga nobis accusamus labore rem dignissimos repellendus debitis incidunt odio molestias omnis, 
                 necessitatibus eveniet modi cupiditate amet, officia quis itaque similique. 
                 </p>
               </div>
             </div>
-
+          
           </div>
-          {/*<div id="gallery'>
-            <a href="http://www.somedomain.com/images/image1_large.jpg">
-              <img src="http://www.somedomain.com/images/image1_small.jpg" title="photo1 title">
-            </a>
-          </div>*/}
         
         </section>
     )

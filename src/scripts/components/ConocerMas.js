@@ -10,7 +10,7 @@ class ConocerMas extends React.Component {
   }
   render() {
     return(
-        <section className="info-row">
+        <section className="row info-row">
           
             <div className="container">
                 <div className="info-texto">
@@ -24,7 +24,7 @@ class ConocerMas extends React.Component {
             </div>
 
             <div className="container">
-                <a class="btn btn-primary" href="#">
+                <a class="btn btn-primary" href="/facultades">
                     ¡Hazlo ya!
                 </a>
             </div>
