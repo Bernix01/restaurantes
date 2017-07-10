@@ -1,5 +1,6 @@
 {
   "name": "restaurantes",
+  "homepage": "https://bernix01.github.io/restaurantes/",
   "version": "0.0.0",
   "description": "Manejo de restaurantes universitarios.",
   "main": "app.js",
