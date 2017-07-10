@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import TimelineSemana from './TimelineSemana'
 import Footer from './Footer'
-import axios from 'axios';
+import axios from 'axios'
 
 export default class Restaurante extends React.Component {
   constructor(props) {
