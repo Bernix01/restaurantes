@@ -90,7 +90,7 @@ export default class Restaurante extends React.Component {
                   alt=""/>
                 <p>{restaurantData.facultad}</p>
                 <p>
-                  <a class="btn btn-primary btn-lg">{restaurantData.status}</a>
+                  <span class="label label-success">{restaurantData.status}</span>
                 </p>
               </div>
             </div>

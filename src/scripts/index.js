@@ -24,8 +24,7 @@ import AcercaDe from './components/AcercaDe'
 import Cartelera from './components/Cartelera'
 import Login from './components/Login'
 import Restaurant from './components/Restaurante'
-
-const $app = document.getElementById('app')
+console.log("sss")
 const logger = createLogger()
 const history = createHistory()
 // Build the middleware for intercepting and dispatching navigation actions
@@ -33,17 +32,17 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const middleware = applyMiddleware(promise(), thunk, routerMiddleware(history))
 
 let store = createStore(reducers, composeEnhancers(middleware))
-
 ReactDOM.render(
   <Provider store={store}>
   <ConnectedRouter history={history}>
     <div>
-      <Route exact path="/" component={App}/>
+      <Route exact path="/"  component={App}/>
       <Route exact path="/facultades" component={Facultad}/>
       <Route exact path="/acerca-de" component={AcercaDe}/>
       <Route exact path="/cartelera" component={Cartelera}/>
       <Route exact path="/facultades/:facultad/:restaurant" component={Restaurant}/>
       <Route exact path="/iniciar-sesion" component={Login}/>
-    </div>
+      </div>
   </ConnectedRouter>
-</Provider>, $app)
+</Provider>, document.getElementById('app'))
+
