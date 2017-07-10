@@ -3,203 +3,89 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
+// import '../actions/form-contacto.js'
+
+// import 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js'
+
 export default class AcercaDe extends React.Component {
   constructor(props) {
     super(props)
   }
-
+  
   render() {
-    let facultadData = [
-      {
-        name: "FCNM",
-        dscr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu" +
-            "tate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit" +
-            " elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris mo" +
-            "lestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iac" +
-            "ulis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, veh" +
-            "icula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis " +
-            "sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam " +
-            "odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricie" +
-            "s metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, bland" +
-            "it sed diam.",
-        restaurants: [
-          {
-            name: "CELEX",
-            status: "Open",
-            img: "http://via.placeholder.com/300x300",
-            likes: 22,
-            liked: true
-          }, {
-            name: "COCA COLA",
-            status: "Open",
-            img: "http://via.placeholder.com/300x300",
-            likes: 22,
-            liked: true
-          }, {
-            name: "CELEX",
-            status: "Open",
-            img: "http://via.placeholder.com/300x300",
-            likes: 22,
-            liked: true
-          }
-        ]
-      }, {
-        name: "FCNM",
-        dscr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu" +
-            "tate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit" +
-            " elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris mo" +
-            "lestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iac" +
-            "ulis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, veh" +
-            "icula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis " +
-            "sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam " +
-            "odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricie" +
-            "s metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, bland" +
-            "it sed diam.",
-        restaurants: [
-          {
-            name: "CELEX",
-            status: "Open",
-            likes: 22,
-            img: "http://via.placeholder.com/300x300",
-            liked: true
-          }, {
-            name: "COCA COla",
-            status: "Open",
-            likes: 22,
-            img: "http://via.placeholder.com/300x300",
-            liked: true
-          }, {
-            name: "CELEX",
-            status: "Open",
-            likes: 22,
-            img: "http://via.placeholder.com/300x300",
-            liked: true
-          }
-        ]
-      }, {
-        name: "FCNM",
-        dscr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu" +
-            "tate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit" +
-            " elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris mo" +
-            "lestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iac" +
-            "ulis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, veh" +
-            "icula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis " +
-            "sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam " +
-            "odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricie" +
-            "s metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, bland" +
-            "it sed diam.",
-        restaurants: [
-          {
-            name: "CELEX",
-            status: "Open",
-            likes: 22,
-            img: "http://via.placeholder.com/300x300",
-            liked: true
-          }, {
-            name: "COCA COla",
-            status: "Open",
-            likes: 22,
-            img: "http://via.placeholder.com/300x300",
-            liked: true
-          }, {
-            name: "CELEX",
-            status: "Open",
-            likes: 22,
-            img: "http://via.placeholder.com/300x300",
-            liked: true
-          }
-        ]
-      }, {
-        name: "FCNM",
-        dscr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu" +
-            "tate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit" +
-            " elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris mo" +
-            "lestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iac" +
-            "ulis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, veh" +
-            "icula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis " +
-            "sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam " +
-            "odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricie" +
-            "s metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, bland" +
-            "it sed diam.",
-        restaurants: [
-          {
-            name: "CELEX",
-            status: "Open",
-            img: "http://via.placeholder.com/300x300",
-            likes: 22,
-            liked: true
-          }, {
-            name: "COCA COla",
-            img: "http://via.placeholder.com/300x300",
-            status: "Open",
-            likes: 22,
-            liked: true
-          }, {
-            name: "CELEX",
-            img: "http://via.placeholder.com/300x300",
-            status: "Open",
-            likes: 22,
-            liked: true
-          }
-        ]
-      }, {
-        name: "FCNM",
-        dscr: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulpu" +
-            "tate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit" +
-            " elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris mo" +
-            "lestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iac" +
-            "ulis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, veh" +
-            "icula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis " +
-            "sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam " +
-            "odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricie" +
-            "s metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, bland" +
-            "it sed diam.",
-        restaurants: [
-          {
-            name: "CELEX",
-            status: "Open",
-            likes: 22,
-            liked: true
-          }, {
-            name: "COCA COla",
-            status: "Open",
-            likes: 22,
-            liked: true
-          }, {
-            name: "CELEX",
-            status: "Open",
-            likes: 22,
-            liked: true
-          }
-        ]
-      }
-    ]
     return (
       <div>
         <Header page={this.props.location.pathname}/>
         <div className="container-fluid">
-          {/*{facultadData.map((facultad, index) => {
-            let restaurants = facultad
-              .restaurants
-              .map((restaurant, index) => {
-                return (
-                  <div className="col-sm-3">
-                    <img src={restaurant.img} alt=""/>
-                    <h4>{restaurant.name}</h4>
-                    <p>{restaurant.status}</p>
+          <div class="row">
+            <div class="col-md-4">
+
+              <h2> Acerca De </h2>
+              <p> Este sitio web permite a los usuarios conocer  los menús semanales que ofrece cada restaurante, así como
+                los platillos más votados por las personas y el restaurante en el cual se venden.</p>
+              <p> Si desea más información, puede ponerse en contacto con nosotros llenando el formulario que se encuentra a continuación. </p>
+              <h2> Autores </h2>
+              <p> Este sitio web fue realizado por </p>
+              <p> Guillermo Bernal </p>
+              <p> José Massón </p>
+
+            </div>
+            <div class = "col-md-8">
+            {/*<div class="col-xl-4 col-xl-offset-4 col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2">*/}
+              <form action = "" class="well form-horizontal" id="formulario-contacto" method="post">
+                
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Nombres</label>  
+                  <div class="col-md-9 inputGroupContainer">
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                      <input name="nombres" placeholder="Nombres" class="form-control"  type="text" required/>
+                    </div>
                   </div>
-                )
-              })
-            return (
-              <div className="row">
-                <div className="col-sm-12">
-                  <h3>{facultad.name}</h3>
-                  <p>{facultad.dscr}</p>
-                  {restaurants}
                 </div>
-              </div>
-            )
-          })}*/}
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Apellidos</label> 
+                    <div class="col-md-9 inputGroupContainer">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="apellidos" placeholder="Apellidos" class="form-control"  type="text" required/>
+                      </div>
+                    </div>
+                </div>
+              
+                <div class="form-group">
+                  <label class="col-md-3 control-label">E-Mail</label>  
+                  <div class="col-md-9 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input name="email" placeholder="Correo electrónico" class="form-control"  type="email" required/>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label class="col-md-3 control-label">Mensaje</label>
+                  <div class="col-md-9 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                        <textarea class="form-control" name="mensaje" placeholder="Mensaje" required></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                {/*<div class="alert alert-success" role="alert" id="success_message">Envio exitoso <i class="glyphicon glyphicon-thumbs-up"></i> Gracias por contactarse con nosotros.</div>*/}
+
+                <div class="form-group">
+                  <label class="col-md-4 control-label"></label>
+                  <div class="col-md-8">
+                    <button type="submit" class="btn btn-success" >Enviar <span class="glyphicon glyphicon-send"></span></button>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
         </div>
         <Footer/>
       </div>
