@@ -50,9 +50,9 @@ export default class App extends React.Component {
       {url:"http://via.placeholder.com/1852x550"},
     ]
     let images2 = [
-      {src:"http://via.placeholder.com/1850x550", srcset:["http://via.placeholder.com/1024x305"]},
-      {src:"http://via.placeholder.com/1856x550", srcset:["http://via.placeholder.com/1024x305"]},
-      {src:"http://via.placeholder.com/1852x550", srcset:["http://via.placeholder.com/1024x305"]},
+      {src:"http://via.placeholder.com/1850x550", srcset:["http://via.placeholder.com/1024x305 1024"]},
+      {src:"http://via.placeholder.com/1856x550", srcset:["http://via.placeholder.com/1024x305 1024"]},
+      {src:"http://via.placeholder.com/1852x550", srcset:["http://via.placeholder.com/1024x305 1024"]},
     ]
     return (
       <div>

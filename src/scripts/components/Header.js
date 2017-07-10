@@ -11,7 +11,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <nav class="navbar navbar-default navbar-fixed-top" >
         <div class="navbar-header">
           <button
             type="button"

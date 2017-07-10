@@ -82,8 +82,8 @@ export default class Facultad extends React.Component {
                 .map((restaurant, index) => {
                   return (
                     <div className="col-sm-3">
-                      <a href={`/facultades/${facultad.name}/${restaurant.name}`}>
-                        <img src={restaurant.img} className="img-responsive" alt=""/>
+                      <a href={`/facultades/${encodeURIComponent(facultad.name)}/${encodeURIComponent(restaurant.name)}`}>
+                        <img src={restaurant.img} className="img-responsive" alt={restaurant.name}/>
                         <h4>{restaurant.name}</h4>
                         <p>{restaurant.status}</p>
                       </a>

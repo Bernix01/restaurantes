@@ -14,7 +14,7 @@ export default class Dia extends React.Component {
           {menus.map((menu, index) => {
             return (
               <div className="menu col-sm-6" key={index}>
-                <img src={menu.img} alt="" className="img-menu img-responsive"/>
+                <img src={menu.img} alt={menu.name} className="img-menu img-responsive"/>
                 <p className="menu-dscr">{menu.dscr}</p>
               </div>
             )

@@ -57,7 +57,7 @@ export default class Cartelera extends React.Component {
                 {masVotadosData.map((plato, index) => {
                 
                     return (
-                      <div className="col-sm-6">
+                      <div className="col-sm-6 ">
                         <div className="top-menu">
                           <span className="likes pull-right">
                             <i className="fa fa-heart-o"></i><br/>{plato.likes}</span>
@@ -81,7 +81,7 @@ export default class Cartelera extends React.Component {
               let menuDia = dia.menu
                 .map((plato, index) => {
                   return (
-                    <div className="col-sm-6">
+                    <div className="col-sm-6 col-md-4 col-lg-3">
                       <div className="menu">
                         <h4 className="menu-name">{plato["nombre-plato"]}</h4>
                         <h6 className="menu-place">{plato.restaurante}</h6>
