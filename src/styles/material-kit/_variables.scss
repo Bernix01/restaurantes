@@ -3,7 +3,7 @@
 @import '_colors';
 
 // Typography elements
-$mdb-font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
+$mdb-font-family: 'Titillium Web', 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
 $mdb-text-color-light:  $white !default;
 $mdb-text-color-light-hex: $white !default; // for contrast function in inverse
 $mdb-text-color-primary: unquote("rgba(#{$rgb-black}, 0.87)") !default;
@@ -23,7 +23,7 @@ $white-color: #FFFFFF !default;
 
 $gray-color:  #999999 !default;
 
-$brand-primary: $teal !default;
+$brand-primary: $red !default;
 $brand-success: $green !default;
 $brand-danger: $red !default;
 $brand-warning: $yellow !default;

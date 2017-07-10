@@ -47,7 +47,7 @@ export default class Cartelera extends React.Component {
     return (
       <div>
         <Header page={this.props.location.pathname}/>
-        <div className="container-fluid">
+        <div className="main container-fluid">
           <div className="row">
             <div className="col-sm-12">
               <h1>Más votados</h1>

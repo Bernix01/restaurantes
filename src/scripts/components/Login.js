@@ -12,11 +12,12 @@ export default class Login extends React.Component {
     return (
       <div>
         <Header page={this.props.location.pathname}/>
+        <div class="container-fluid">    
             <div class="row">
                 <div class="container">
                     <div class="Absolute-Center is-Responsive">
                         <div class="col-xl-4 col-xl-offset-4 col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2">
-                            <form action="" className="formulario">
+                            <form action="" className="formulario well form-vertical">
 
                                 <div id="logo-container"></div>
                                 {/*<img src={"http://via.placeholder.com/300x300"} alt="Avatar" class="avatar"/>*/}
@@ -39,13 +40,14 @@ export default class Login extends React.Component {
                                     <button type="submit" class="btn btn-success btn-block">Login</button>
                                 </div>
                                 <div class="form-group text-center">
-                                    <a href="#">¿Ha olvidado su contraseña?</a>
+                                    <a href="/">¿Ha olvidado su contraseña?</a>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>    
             </div>
+        </div>
         <Footer/>
       </div>
     )

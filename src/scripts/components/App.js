@@ -31,7 +31,7 @@ export default class App extends React.Component {
     return (
       <div>
         <Header page={this.props.location.pathname}/>
-        <div className="container-fluid">
+        <div className="main container-fluid">
         <Carousel images={images}/>
         <Info/>
         <ConocerMas/>

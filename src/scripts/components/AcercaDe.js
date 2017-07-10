@@ -16,7 +16,7 @@ export default class AcercaDe extends React.Component {
     return (
       <div>
         <Header page={this.props.location.pathname}/>
-        <div className="container-fluid">
+        <div className="main container-fluid">
           <div class="row">
             <div class="col-md-4">
 

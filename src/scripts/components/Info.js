@@ -12,7 +12,7 @@ class Info extends React.Component {
   }
   render() {
     return(
-        <section className="row info">
+        <section className="row info-row">
 
           <div className="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2">
             <h1 class="info-texto">Encuéntralo en un solo clic</h1>

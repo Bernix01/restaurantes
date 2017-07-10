@@ -70,7 +70,7 @@ export default class Facultad extends React.Component {
       return (
         <div>
           <Header page={this.props.location.pathname}/>
-          <div className="container-fluid">
+          <div className="main container-fluid">
             <div className="row">
               <div className="col-sm-12">
                 <Mapa containerElement={container} mapElement={mapElem} markers={markers}/>
