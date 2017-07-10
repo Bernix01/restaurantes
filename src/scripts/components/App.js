@@ -91,13 +91,13 @@ export default class App extends React.Component {
       {
         id: '010101',
         caption: "adasd",
-        src: "http://via.placeholder.com/1850x550",
-        thumbnail: "http://via.placeholder.com/400x300"
+        src: "https://raw.githubusercontent.com/Bernix01/restaurantes/master/src/img/gallery/01.jpg",
+        thumbnail: "https://raw.githubusercontent.com/Bernix01/restaurantes/master/src/img/gallery/01_391.jpg"
       }, {
         id: '020202',
         caption: "adasd",
-        src: "http://via.placeholder.com/1856x550",
-        thumbnail: "http://via.placeholder.com/400x300"
+        src: "https://raw.githubusercontent.com/Bernix01/restaurantes/master/src/img/gallery/02.jpg",
+        thumbnail: "https://raw.githubusercontent.com/Bernix01/restaurantes/master/src/img/gallery/02_361.jpg"
       }, {
         id: '030303',
         caption: "adasd",
