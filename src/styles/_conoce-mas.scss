@@ -4,34 +4,46 @@
 
     margin: 60px 0;
 
-    .container {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .info-texto {
-
-            text-align: center;
-
-        }
-
-        .infobox {
-
-            .icono {
-                padding: 10px 0;
-                text-align: center;
-
-            }
-
-        }
-        
-        .btn-primary {
-
-            // background-color: $btnColor;
-
-        }
-
+    .info-texto {
+        text-align: center;
     }
+    
+    .boton {
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+
+
+    // .container {
+
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+
+    //     .info-texto {
+
+    //         text-align: center;
+
+    //     }
+
+    //     .infobox {
+
+    //         .icono {
+    //             padding: 10px 0;
+    //             text-align: center;
+
+    //         }
+
+    //     }
+        
+    //     .btn-primary {
+
+    //         // background-color: $btnColor;
+
+    //     }
+
+    // }
 
 }

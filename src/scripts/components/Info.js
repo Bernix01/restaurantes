@@ -14,7 +14,7 @@ class Info extends React.Component {
     return(
         <section className="row info">
 
-          <div className="col-md-6 col-md-offset-3">
+          <div className="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2">
             <h1 class="info-texto">Encuéntralo en un solo clic</h1>
             <p class="info-texto">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
