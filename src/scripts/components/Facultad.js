@@ -33,6 +33,7 @@ export default class Facultad extends React.Component {
     this.state = {
       facultadData: []
     };
+this.like = this.like.bind(this);
   }
 
   componentDidMount() {
@@ -44,6 +45,15 @@ export default class Facultad extends React.Component {
         this.setState({facultadData});
       });
   }
+
+  like(restaurant){
+	
+axios.post("/like",{params:{data:this.state.facultadData,restaurant:restaurant}})
+      .then(res => {
+        const facultadData = res.data
+        this.setState({facultadData});
+      });
+}
 
   render() {
     let facultadData = this.state.facultadData
@@ -82,15 +92,15 @@ export default class Facultad extends React.Component {
                 .map((restaurant, index) => {
                   return (
                     <div className="col-sm-3">
-                      <a href={`/facultades/${encodeURIComponent(facultad.name)}/${encodeURIComponent(restaurant.name)}`}>
-                        <span className="likes pull-right">
+                      
+                        <span className="likes pull-right" onClick={() => this.like(restaurant)}>
                             <i className="fa fa-heart-o"></i><br/>{restaurant.likes}
                         </span>
                         <img src={restaurant.img} className="img-responsive" alt={restaurant.name}/>
-                        
+                        <a href={`/facultades/${encodeURIComponent(facultad.name)}/${encodeURIComponent(restaurant.name)}`}>
                         <h4>{restaurant.name}</h4>
-                        <p>{restaurant.status}</p>
                       </a>
+                        <p>{restaurant.status}</p>
                     </div>
                   )
                 })

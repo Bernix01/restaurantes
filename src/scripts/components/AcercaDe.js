@@ -32,7 +32,7 @@ export default class AcercaDe extends React.Component {
             </div>
             <div class = "col-md-8">
             {/*<div class="col-xl-4 col-xl-offset-4 col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2">*/}
-              <form action = "" class="well form-horizontal" id="formulario-contacto" method="post">
+              <form action = "/contacto" class="well form-horizontal" id="formulario-contacto" method="post">
                 
                 <div class="form-group">
                   <label class="col-md-3 control-label">Nombres</label>  
@@ -53,6 +53,8 @@ export default class AcercaDe extends React.Component {
                       </div>
                     </div>
                 </div>
+
+              
               
                 <div class="form-group">
                   <label class="col-md-3 control-label">E-Mail</label>  
@@ -63,7 +65,7 @@ export default class AcercaDe extends React.Component {
                     </div>
                   </div>
                 </div>
-
+ 
                 <div class="form-group">
                   <label class="col-md-3 control-label">Mensaje</label>
                   <div class="col-md-9 inputGroupContainer">
@@ -73,8 +75,27 @@ export default class AcercaDe extends React.Component {
                     </div>
                   </div>
                 </div>
-
-                {/*<div class="alert alert-success" role="alert" id="success_message">Envio exitoso <i class="glyphicon glyphicon-thumbs-up"></i> Gracias por contactarse con nosotros.</div>*/}
+ <div class="form-group">
+                  <label class="col-md-3 control-label">Promociones</label> 
+                    <div class="col-md-9 inputGroupContainer">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+ 			<input type="checkbox" name="promociones" value="si" /> Desea recibir promociones?<br />
+                      </div>
+                    </div>
+                </div>
+                
+ <div class="form-group">
+                  <label class="col-md-3 control-label">Promociones</label> 
+                    <div class="col-md-9 inputGroupContainer">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+<input type="radio" name="gender" value="male"/> Male<br/>
+  <input type="radio" name="gender" value="female"/> Female<br/>
+  <input type="radio" name="gender" value="other"/> Other
+                      </div>
+                    </div>
+                </div>{/*<div class="alert alert-success" role="alert" id="success_message">Envio exitoso <i class="glyphicon glyphicon-thumbs-up"></i> Gracias por contactarse con nosotros.</div>*/}
 
                 <div class="form-group">
                   <label class="col-md-4 control-label"></label>

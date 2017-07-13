@@ -18,7 +18,7 @@ export default class Cartelera extends React.Component {
 
   componentDidMount() {
     this.state.cargandoData = true;
-    axios.get("https://raw.githubusercontent.com/Bernix01/restaurantes/master/src/data/cartelera.json")
+    axios.get("/datos")
       .then(res => {
         const masVotadosData = res.data["mas-votados"]
         const estaSemanaData = res.data["esta-semana"]
