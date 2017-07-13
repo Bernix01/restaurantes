@@ -17,7 +17,7 @@ app.post('/contacto',function(req,res){
 });
 
 app.post('/like',function(req,res){
-	console.log(req.body.data);
+	
 console.log(req.body.restaurant);
 	
 });

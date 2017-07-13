@@ -6767,7 +6767,7 @@ a, a:hover, a:focus {
     width: 0;
     height: 0;
     background: red;
-    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
+    box-shadow: 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0, 0 0 0 0 inset;
     -webkit-animation: checkbox-off 0.3s forwards;
     -moz-animation: checkbox-off 0.3s forwards;
     -o-animation: checkbox-off 0.3s forwards;
@@ -6782,7 +6782,7 @@ a, a:hover, a:focus {
 
 .checkbox input[type=checkbox]:checked + .checkbox-material .check:before {
   color: #FFFFFF;
-  box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
+  box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px;
   -webkit-animation: checkbox-on 0.3s forwards;
   -moz-animation: checkbox-on 0.3s forwards;
   -o-animation: checkbox-on 0.3s forwards;
@@ -6833,11 +6833,11 @@ fieldset[disabled] .checkbox input[type=checkbox],
 
 @keyframes checkbox-on {
   0% {
-    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px; }
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 15px 2px 0 11px; }
   50% {
-    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px; }
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px 2px 0 11px; }
   100% {
-    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px; } }
+    box-shadow: 0 0 0 10px, 10px -10px 0 10px, 32px 0 0 20px, 0px 32px 0 20px, -5px 5px 0 10px, 20px -12px 0 11px; } }
 
 @keyframes rippleOn {
   0% {
@@ -9278,7 +9278,7 @@ footer {
 @font-face {
   font-family: 'FontAwesome';
   src: url(674f50d287a8c48dc19ba404d20fe713.eot);
-  src: url(674f50d287a8c48dc19ba404d20fe713.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(af7ae505a9eed503f8b8e6982036873e.woff2) format("woff2"), url(fee66e712a8a08eef5805a46892932ad.woff) format("woff"), url(b06871f281fee6b241d60582ae9369b9.ttf) format("truetype"), url(acf3dcb7ff752b5296ca23ba2c7c2606.svg#fontawesomeregular) format("svg");
+  src: url(674f50d287a8c48dc19ba404d20fe713.eot?#iefix&v=4.7.0) format("embedded-opentype"), url(af7ae505a9eed503f8b8e6982036873e.woff2) format("woff2"), url(fee66e712a8a08eef5805a46892932ad.woff) format("woff"), url(b06871f281fee6b241d60582ae9369b9.ttf) format("truetype"), url(912ec66d7572ff821749319396470bde.svg#fontawesomeregular) format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -11598,4 +11598,4 @@ footer {
   overflow: visible;
   clip: auto; }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtZDc3ZjI2MDc4ZTRiMTVjYzE5ZDYubWluLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhcHAtYmIwYTU0MWMwODM3MjdiYmEwZTkubWluLmNzcyIsInNvdXJjZVJvb3QiOiIifQ==*/
