@@ -48,9 +48,15 @@ this.like = this.like.bind(this);
 
   like(restaurant){
 	
-axios.post("/like",{params:{data:this.state.facultadData,restaurant:restaurant}})
+axios.post("/like",{params:{restaurant:restaurant}})
       .then(res => {
-        const facultadData = res.data
+        const facultadData = this.state.facultadData.map((facultad) =>{
+          facultad.restaurants.map((restaurant)=>{
+              if(restaurant.deepEqual(res.data)){
+                return Object.assing(restaurant,res.data)
+              }
+          })
+        })
         this.setState({facultadData});
       });
 }

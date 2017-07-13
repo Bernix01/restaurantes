@@ -6,7 +6,7 @@ app.use(express.static(__dirname + '/docs'));
 
 
 app.listen(process.env.PORT || 8080, function () {
-    console.log('Node app is running on port', process.env.PORT || 80);
+    console.log('Node app is running on port', process.env.PORT || 8080);
 });
 
 app.get('/hola',function(req,res){
@@ -18,7 +18,9 @@ app.post('/contacto',function(req,res){
 
 app.post('/like',function(req,res){
 	
-console.log(req.body.restaurant);
+let rest = req.body.params.restaurant;
+rest.likes++;
+res.send(200,rest);
 	
 });
 
