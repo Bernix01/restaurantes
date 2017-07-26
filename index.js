@@ -1,5 +1,6 @@
 var express = require("express");
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+var Factura = require('./models.js').Factura;
 var app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/docs'));
@@ -24,6 +25,23 @@ res.send(200,rest);
 	
 });
 
+app.get('/facturas',function(req,res){
+  Factura.find({}).catch((err)=>{
+    console.log(err);
+    res.send(500,"error!");
+  }).then((facturas)=>{
+    res.send(200,facturas);
+  });
+});
+//actualizar
+app.post('/factura/:id',function(req,res){
+
+});
+//crear
+app.put('/factura',function(req,res){
+  if(!req.params.
+  Factura.create({}).catch((err)=>{}).then((factura)=>{});
+});
 
 app.get('/datos',function(req,res){
 	res.send(200, {
