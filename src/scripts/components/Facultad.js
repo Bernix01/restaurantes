@@ -33,7 +33,7 @@ export default class Facultad extends React.Component {
     this.state = {
       facultadData: []
     };
-this.like = this.like.bind(this);
+    this.like = this.like.bind(this);
   }
 
   componentDidMount() {
@@ -48,18 +48,18 @@ this.like = this.like.bind(this);
 
   like(restaurant){
 	
-axios.post("/like",{params:{restaurant:restaurant}})
-      .then(res => {
-        const facultadData = this.state.facultadData.map((facultad) =>{
-          facultad.restaurants.map((restaurant)=>{
-              if(restaurant.deepEqual(res.data)){
-                return Object.assing(restaurant,res.data)
-              }
+  axios.post("/like",{params:{restaurant:restaurant}})
+        .then(res => {
+          const facultadData = this.state.facultadData.map((facultad) =>{
+            facultad.restaurants.map((restaurant)=>{
+                if(restaurant.deepEqual(res.data)){
+                  return Object.assing(restaurant,res.data)
+                }
+            })
           })
-        })
-        this.setState({facultadData});
-      });
-}
+          this.setState({facultadData});
+        });
+  }
 
   render() {
     let facultadData = this.state.facultadData

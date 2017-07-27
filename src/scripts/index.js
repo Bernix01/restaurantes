@@ -24,6 +24,10 @@ import AcercaDe from './components/AcercaDe'
 import Cartelera from './components/Cartelera'
 import Login from './components/Login'
 import Restaurant from './components/Restaurante'
+import Factura from './components/Factura'
+import Facturas from './components/Facturas'
+
+
 console.log("sss")
 const logger = createLogger()
 const history = createHistory()
@@ -42,6 +46,8 @@ ReactDOM.render(
       <Route exact path="/cartelera" component={Cartelera}/>
       <Route exact path="/facultades/:facultad/:restaurant" component={Restaurant}/>
       <Route exact path="/iniciar-sesion" component={Login}/>
+      <Route exact path="/factura" component={Factura}/>
+      <Route exact path="/facturas" component={Facturas}/>
       </div>
   </ConnectedRouter>
 </Provider>, document.getElementById('app'))

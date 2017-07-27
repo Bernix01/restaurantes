@@ -1,0 +1,19 @@
+{
+    "facturas" : [
+        {
+            "id" : 1,
+            "empresa" : "PPL",
+            "fecha" : "27/7/2017",
+            "total" : 54.00,
+            "estado" : "Pagada"
+        },
+        {
+            "id" : 2,
+            "empresa" : "PPL V2",
+            "fecha" : "27/7/2017",
+            "total" : 29.00,
+            "estado" : "Pagada"
+        }
+        
+    ]
+}
