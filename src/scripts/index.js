@@ -24,7 +24,8 @@ import AcercaDe from './components/AcercaDe'
 import Cartelera from './components/Cartelera'
 import Login from './components/Login'
 import Restaurant from './components/Restaurante'
-import Factura from './components/Factura'
+import CrearFactura from './components/CrearFactura'
+import ModificarFactura from './components/ModificarFactura'
 import Facturas from './components/Facturas'
 
 
@@ -46,7 +47,8 @@ ReactDOM.render(
       <Route exact path="/cartelera" component={Cartelera}/>
       <Route exact path="/facultades/:facultad/:restaurant" component={Restaurant}/>
       <Route exact path="/iniciar-sesion" component={Login}/>
-      <Route exact path="/factura" component={Factura}/>
+      <Route exact path="/factura" component={CrearFactura}/>
+      <Route exact path="/factura/:id" component={ModificarFactura}/>
       <Route exact path="/facturas" component={Facturas}/>
       </div>
   </ConnectedRouter>
