@@ -14,20 +14,21 @@ export default class Facturas extends React.Component {
   }
 
   eliminarFactura(id) {
-    axios.delete("/api/facturas",{params:{id:id}})
-        .then(res => {
-          const facturaData = this.state.facturaData.map((factura) =>{
-            if (factura.deepEqual(res.data)) {
-              return Object.assign(factura, res.data)
-            }
-            // facultad.restaurants.map((restaurant)=>{
-            //     if(restaurant.deepEqual(res.data)){
-            //       return Object.assing(restaurant,res.data)
-            //     }
-            // })
-          })
-          this.setState({facultadData});
-        });
+    console.log(id);
+    // axios.delete("/api/facturas",{params:{id:id}})
+    //     .then(res => {
+    //       const facturaData = this.state.facturaData.map((factura) =>{
+    //         if (factura.deepEqual(res.data)) {
+    //           return Object.assign(factura, res.data)
+    //         }
+    //         // facultad.restaurants.map((restaurant)=>{
+    //         //     if(restaurant.deepEqual(res.data)){
+    //         //       return Object.assing(restaurant,res.data)
+    //         //     }
+    //         // })
+    //       })
+    //       this.setState({facturaData});
+    //     });
   }
 
   componentDidMount() {
