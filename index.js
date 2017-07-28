@@ -66,7 +66,21 @@ app.delete('/api/facturas',(req,res) => {
 })
 
 //crear
-app.put('/api/facturas',(req, res) => {});
+app.put('/api/facturas',(req, res) => {
+  let factura = new Factura({
+    numFactura: req.body.params.numfactura,
+    nombreEmpresa: req.body.params.cliente,
+    fechaPago: req.body.params.date,
+    cantidad: req.body.params.costo,
+    estado: req.body.params.estado,
+  });
+
+  factura.save().then((factura)=>{
+    res.send(200,"ok");
+  }).catch((err)=>{
+    res.send(500,"err");
+  })
+});
 
 app.get('/datos', (req, res) =>{
   res.send(200, {
