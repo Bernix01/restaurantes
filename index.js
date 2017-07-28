@@ -22,7 +22,6 @@ app.post('/like', function (req, res) {
   res.send(200, rest);
 });
 
-
 app.get('/api/facturas', function (req, res) {
   Factura
     .find({})
@@ -48,16 +47,28 @@ app.get('/api/facturas', function (req, res) {
 });
 //actualizar
 app.post('/api/facturas/:id', function (req, res) {
-    Factura.findById(req.params.id).then((factura)=>{
-      res.send(200,factura);
-    }).catch((err)=>{
-      res.send(500,)
+  Factura
+    .findById(req.params.id)
+    .then((factura) => {
+      res.send(200, factura);
+    })
+    .catch((err) => {
+      res.send(500, "derp");
     })
 });
+
+//borrar
+app.delete('/api/facturas',(req,res) => {
+  Factura.findByIdAndRemove(req.params.id).then(()=>{
+    res.send(200,"ok");
+  }).catch((err)=>{
+    console.log("error deleting",err);
+    res.send(500,"derp");
+  })
+})
+
 //crear
-app.put('/api/facturas', function (req, res) {
-  
-});
+app.put('/api/facturas', function (req, res) {});
 
 app.get('/datos', function (req, res) {
   res.send(200, {
