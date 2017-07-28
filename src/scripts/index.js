@@ -50,7 +50,7 @@ ReactDOM.render(
       <Route exact path="/factura" component={CrearFactura}/>
       <Route exact path="/factura/:id" component={ModificarFactura}/>
       <Route exact path="/facturas" component={Facturas}/>
-      </div>
+    </div>
   </ConnectedRouter>
 </Provider>, document.getElementById('app'))
 

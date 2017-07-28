@@ -33,10 +33,11 @@ export default class Facturas extends React.Component {
             <div class="main container-fluid">    
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                      <div className="card-header">
+                      <div class="card-header">
                         <h1>Facturas</h1>
+                        <a href="/factura" class="btn btn-success btn-block" target="_blank"><i class="fa fa-th-list"></i> Crear Factura</a>
                       </div>
-                      <div className="card-content table-responsive">
+                      <div class="card-content table-responsive">
                         <table class="table table-bordered table-hover">
                           <thead>
                             <tr>
