@@ -45,8 +45,8 @@ app.get('/api/facturas', function (req, res) {
       res.send(200, facturas);
     });
 });
-//actualizar
-app.post('/api/facturas/:id', function (req, res) {
+//obtener por id
+app.get('/api/facturas/:id', function (req, res) {
   Factura
     .findById(req.params.id)
     .then((factura) => {
