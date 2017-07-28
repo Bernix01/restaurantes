@@ -18,7 +18,7 @@ export default class CrearFactura extends React.Component {
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
                             <h1>Crear Factura</h1>
-                            <Factura/>
+                            <Factura method={"put"}/>
                         </div>
                     </div>
                 </div>

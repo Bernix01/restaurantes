@@ -13,6 +13,23 @@ export default class Facturas extends React.Component {
     };
   }
 
+  eliminarFactura(id) {
+    axios.delete("/api/facturas",{params:{id:id}})
+        .then(res => {
+          const facturaData = this.state.facturaData.map((factura) =>{
+            if (factura.deepEqual(res.data)) {
+              return Object.assign(factura, res.data)
+            }
+            // facultad.restaurants.map((restaurant)=>{
+            //     if(restaurant.deepEqual(res.data)){
+            //       return Object.assing(restaurant,res.data)
+            //     }
+            // })
+          })
+          this.setState({facultadData});
+        });
+  }
+
   componentDidMount() {
     axios
       .get("https://raw.githubusercontent.com/Bernix01/restaurantes/master/src/data/facturas" +
@@ -60,7 +77,7 @@ export default class Facturas extends React.Component {
                                     <a href={`/factura/${encodeURIComponent(factura.id)}`} rel="tooltip" title="Editar" class="btn btn-simple btn-warning btn-xs" data-original-title="Editar">
                                       <i class="fa fa-pencil"></i>
                                     </a>
-                                    <a href="#" rel="tooltip" title="Eliminar" class="btn-simple btn btn-danger btn-xs" data-original-title="Eliminar">
+                                    <a rel="tooltip" title="Eliminar" class="btn-simple btn btn-danger btn-xs" data-original-title="Eliminar" onClick={() => this.eliminarFactura(factura.id)}>
                                       <i class="fa fa-remove"></i>
                                     </a>
                                   </td>

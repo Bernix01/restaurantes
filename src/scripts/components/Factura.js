@@ -9,14 +9,26 @@ export default class Factura extends React.Component {
   }
 
   render() {
+    let {method} = this.props
+    console.log(images)
     return (
       // <div>
       //   <Header page={this.props.location.pathname}/>
       //   <div class="main container-fluid">    
       //       <div class="row">
       //         <div class="col-md-6 col-md-offset-3">
-      <form action = "/api/facturas" class="well form-horizontal" id="formulario-factura" method="post">
+      <form action = "/api/facturas" class="well form-horizontal" id="formulario-factura" method={method}>
       
+        <div class="form-group">
+          <label class="col-md-3 control-label">Número de Factura</label>  
+          <div class="col-md-9 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+              <input name="numfactura" placeholder="Número de Factura" class="form-control"  type="text" required/>
+            </div>
+          </div>
+        </div>
+
         <div class="form-group">
           <label class="col-md-3 control-label">Cliente</label>  
           <div class="col-md-9 inputGroupContainer">
