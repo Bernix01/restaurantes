@@ -74,10 +74,11 @@ app.put('/api/facturas',(req, res) => {
     cantidad: req.body.params.costo,
     estado: req.body.params.estado,
   });
-
+  console.log(req);
   factura.save().then((factura)=>{
     res.send(200,"ok");
   }).catch((err)=>{
+    //console.log(err)
     res.send(500,"err");
   })
 });
