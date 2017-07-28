@@ -56,7 +56,7 @@ export default class Facturas extends React.Component {
                                   <td>{factura.total}</td>
                                   <td>{factura.estado}</td>
                                   <td class="td-action">
-                                    <a href="#" rel="tooltip" title="Editar" class="btn btn-simple btn-warning btn-xs" data-original-title="Editar">
+                                    <a href={`/factura/${encodeURIComponent(factura.id)}`} rel="tooltip" title="Editar" class="btn btn-simple btn-warning btn-xs" data-original-title="Editar">
                                       <i class="fa fa-pencil"></i>
                                     </a>
                                     <a href="#" rel="tooltip" title="Eliminar" class="btn-simple btn btn-danger btn-xs" data-original-title="Eliminar">
