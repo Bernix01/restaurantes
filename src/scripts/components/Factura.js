@@ -15,7 +15,7 @@ export default class Factura extends React.Component {
       //   <div class="main container-fluid">    
       //       <div class="row">
       //         <div class="col-md-6 col-md-offset-3">
-      <form action = "/factura" class="well form-horizontal" id="formulario-factura" method="post">
+      <form action = "/api/facturas" class="well form-horizontal" id="formulario-factura" method="post">
       
         <div class="form-group">
           <label class="col-md-3 control-label">Cliente</label>  
