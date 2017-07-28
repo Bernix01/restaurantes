@@ -1,40 +1,30 @@
-var express = require("express");
-var bodyParser = require('body-parser');
-var Factura = require('./models.js').Factura;
-var app = express();
+const express = require("express");
+const bodyParser = require('body-parser');
+const Factura = require('./models.js').Factura;
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_HOST || 'mongodb://localhost/restaurantes');
+const app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/docs'));
 
-app.listen(process.env.PORT || 8080, function () {
+app.listen(process.env.PORT || 8080, () => {
   console.log('Node app is running on port', process.env.PORT || 8080);
 });
 
-app.get('/hola', function (req, res) {
+app.get('/hola', (req, res) => {
   res.send(200, "HOLA!");
 });
-app.post('/contacto', function (req, res) {
+app.post('/contacto', (req, res) => {
   res.send(200, "recibido!");
 });
 
-app.post('/like', function (req, res) {
+app.post('/like', (req, res) => {
   let rest = req.body.params.restaurant;
   rest.likes++;
   res.send(200, rest);
 });
 
-app.get('/api/facturas', function (req, res) {
-  Factura
-    .find({})
-    .catch((err) => {
-      console.log(err);
-      res.send(500, "error!");
-    })
-    .then((facturas) => {
-      res.send(200, facturas);
-    });
-});
-
-app.get('/api/facturas', function (req, res) {
+app.get('/api/facturas', (req, res) => {
   Factura
     .find({})
     .catch((err) => {
@@ -46,19 +36,27 @@ app.get('/api/facturas', function (req, res) {
     });
 });
 //obtener por id
-app.get('/api/facturas/:id', function (req, res) {
+app.get('/api/facturas/:id', (req, res) => {
+  //verificar si el id es valido
+  if (!req.params.id.match(/^[0-9a-fA-F]{24}$/))
+    res.send(400,"bad id");
   Factura
-    .findById(req.params.id)
+    .findById({_id:req.params.id})
     .then((factura) => {
+      console.log(factura);
       res.send(200, factura);
     })
     .catch((err) => {
+      console.log(err)
       res.send(500, "derp");
     })
 });
 
 //borrar
 app.delete('/api/facturas',(req,res) => {
+  //verificar si el id es valido
+  if (!req.params.id.match(/^[0-9a-fA-F]{24}$/))
+    res.send(400,"bad id");
   Factura.findByIdAndRemove(req.params.id).then(()=>{
     res.send(200,"ok");
   }).catch((err)=>{
@@ -68,9 +66,9 @@ app.delete('/api/facturas',(req,res) => {
 })
 
 //crear
-app.put('/api/facturas', function (req, res) {});
+app.put('/api/facturas',(req, res) => {});
 
-app.get('/datos', function (req, res) {
+app.get('/datos', (req, res) =>{
   res.send(200, {
     "mas-votados": [
       {
@@ -270,6 +268,6 @@ app.get('/datos', function (req, res) {
 
 });
 
-app.get('/*', function (req, res) {
+app.get('/*', (req, res) => {
   res.sendFile(__dirname + '/docs/index.html');
 });

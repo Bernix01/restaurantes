@@ -1,8 +1,8 @@
-var mongoose = require("mongoose");
-var Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
 //modelo factura
-var FacturaSchema = new Schema({
+const FacturaSchema = new Schema({
 	numFactura: {type: String, required: true, unique: true},
 	nombreEmpresa: {type: String, required: true},
 	fechaPago: {type: Date, required: true},
@@ -14,6 +14,8 @@ FacturaSchema.path('numFactura').validate(function(dato){
 	return dato.length = 16;
 });
 
+const Factura = mongoose.model('Factura', FacturaSchema);
+
 module.exports = {
-	Factura: FacturaSchema
+	Factura: Factura
 };
