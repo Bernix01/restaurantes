@@ -38,10 +38,10 @@ app.get('/api/facturas', (req, res) => {
 //obtener por id
 app.get('/api/facturas/:id', (req, res) => {
   //verificar si el id es valido
-  if (!req.params.id.match(/^[0-9a-fA-F]{24}$/))
-    res.send(400,"bad id");
+  if (!req.params.id.match(/^[0-9a-fA-F]{24}$/)) 
+    res.send(400, "bad id");
   Factura
-    .findById({_id:req.params.id})
+    .findById({_id: req.params.id})
     .then((factura) => {
       console.log(factura);
       res.send(200, factura);
@@ -53,22 +53,37 @@ app.get('/api/facturas/:id', (req, res) => {
 });
 
 //borrar
-app.delete('/api/facturas',(req,res) => {
+app.delete('/api/facturas', (req, res) => {
   //verificar si el id es valido
-  if (!req.params.id.match(/^[0-9a-fA-F]{24}$/))
-    res.send(400,"bad id");
-  Factura.findByIdAndRemove(req.params.id).then(()=>{
-    res.send(200,"ok");
-  }).catch((err)=>{
-    console.log("error deleting",err);
-    res.send(500,"derp");
-  })
+  if (!req.params.id.match(/^[0-9a-fA-F]{24}$/)) 
+    res.send(400, "bad id");
+  Factura
+    .findByIdAndRemove(req.params.id)
+    .then(() => {
+      res.send(200, "ok");
+    })
+    .catch((err) => {
+      console.log("error deleting", err);
+      res.send(500, "derp");
+    })
 })
 
 //crear
-app.put('/api/facturas',(req, res) => {});
+app.put('/api/facturas', (req, res) => {
+  let factura = new Factura({numFactura: req.body.params.numfactura, nombreEmpresa: req.body.params.cliente, fechaPago: req.body.params.date, cantidad: req.body.params.costo, estado: req.body.params.estado});
+  console.log(req);
+  factura
+    .save()
+    .then((factura) => {
+      res.send(200, "ok");
+    })
+    .catch((err) => {
+      //console.log(err)
+      res.send(500, "err");
+    })
+});
 
-app.get('/datos', (req, res) =>{
+app.get('/datos', (req, res) => {
   res.send(200, {
     "mas-votados": [
       {
