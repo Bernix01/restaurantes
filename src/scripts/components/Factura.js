@@ -22,6 +22,16 @@ export default class Factura extends React.Component {
     }
     axios.put("/api/facturas", factura)
         .then(res => {
+          location.replace("/facturas");
+        })
+        .catch(error => {
+          alert(error.response.data);
+        });
+  }
+
+  componentDidMount(){
+    axios.get("/api/facturas/"+this.props.id, factura)
+        .then(res => {
           alert(res);
         })
         .catch(error => {
@@ -43,7 +53,7 @@ export default class Factura extends React.Component {
           <div class="col-md-9 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-              <input name="numfactura" placeholder="Número de Factura" class="form-control"  value="1234567890123456" type="text" required/>
+              <input name="numfactura" placeholder="Número de Factura" class="form-control"  type="text" required/>
             </div>
           </div>
         </div>
@@ -53,7 +63,7 @@ export default class Factura extends React.Component {
           <div class="col-md-9 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-              <input name="cliente" placeholder="Cliente" value="Guillermo" class="form-control"  type="text" required/>
+              <input name="cliente" placeholder="Cliente" class="form-control"  type="text" required/>
             </div>
           </div>
         </div>
@@ -63,7 +73,7 @@ export default class Factura extends React.Component {
             <div class="col-md-9 inputGroupContainer">
               <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                <input name="date" placeholder="Fecha Máxima de Pago" value="2014-12-12" class="form-control"  type="date" required/>
+                <input name="date" placeholder="Fecha Máxima de Pago" class="form-control"  type="date" required/>
               </div>
             </div>
         </div>
@@ -74,7 +84,7 @@ export default class Factura extends React.Component {
           <div class="col-md-9 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-                <input name="costo" placeholder="Total a Pagar" value="12" class="form-control"  type="number" min="0" step="0.01" required/>
+                <input name="costo" placeholder="Total a Pagar" class="form-control"  type="number" min="0" step="0.01" required/>
             </div>
           </div>
         </div>
@@ -86,7 +96,7 @@ export default class Factura extends React.Component {
                 <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign"></i></span>
                 <select name="estado" class="form-control">
                     <option disabled selected value>Seleccione un estado</option>
-                    <option value="pagado" selected>Pagado</option>
+                    <option value="pagado">Pagado</option>
                     <option value="pendiente">Pendiente</option>
                     <option value="acumulado">Acumulado</option>
                 </select>

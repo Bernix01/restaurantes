@@ -87,7 +87,7 @@ app.put('/api/facturas', (req, res) => {
     })
     .catch((err) => {
       console.log(err)
-      res.send(500, "err");
+      res.send(500, "La factura ya existe");
     })
 });
 
