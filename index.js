@@ -3,8 +3,7 @@ const bodyParser = require('body-parser');
 const Factura = require('./models.js').Factura;
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_HOST || 'mongodb://localhost:27017/restaurantes');
-// var db = mongoose.connection;
-// console.log(db);
+// var db = mongoose.connection; console.log(db);
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/docs'));
@@ -21,7 +20,7 @@ app.post('/contacto', (req, res) => {
 });
 
 app.post('/like', (req, res) => {
-  let rest = req.body.params.restaurant;
+  let rest = req.body.restaurant;
   rest.likes++;
   res.send(200, rest);
 });
@@ -42,7 +41,7 @@ app.get('/api/facturas', (req, res) => {
 //obtener por id
 app.get('/api/facturas/:id', (req, res) => {
   //verificar si el id es valido
-  if (!req.body.params.id.match(/^[0-9a-fA-F]{24}$/)) 
+  if (!req.body.id.match(/^[0-9a-fA-F]{24}$/)) 
     res.send(400, "bad id");
   Factura
     .findById({_id: req.params.id})
@@ -58,11 +57,9 @@ app.get('/api/facturas/:id', (req, res) => {
 
 //borrar
 app.delete('/api/facturas', (req, res) => {
-  //verificar si el id es valido
-  // console.log(req.statusCode);
-  // console.log(req.params);
-  // console.log("Hola Mundo");
-  console.log(req.params.id);
+  // verificar si el id es valido console.log(req.statusCode);
+  // console.log(req.params); console.log("Hola Mundo");
+  console.log(req);
   if (!req.params.id.match(/^[0-9a-fA-F]{24}$/)) 
     res.send(400, "bad id");
   Factura
@@ -74,12 +71,15 @@ app.delete('/api/facturas', (req, res) => {
     .then(() => {
       res.send(200, "ok");
     })
-    
+
 })
 
 //crear
 app.put('/api/facturas', (req, res) => {
-  let factura = new Factura({numFactura: req.body.params.numfactura, nombreEmpresa: req.body.params.cliente, fechaPago: req.body.params.date, cantidad: req.body.params.costo, estado: req.body.params.estado});
+  console.log("putting!")
+  console.log(req.params);
+  console.log(req.body);
+  let factura = new Factura({numFactura: req.body.numfactura, nombreEmpresa: req.body.cliente, fechaPago: req.body.date, cantidad: req.body.costo, estado: req.body.estado});
   console.log(req);
   factura
     .save()
