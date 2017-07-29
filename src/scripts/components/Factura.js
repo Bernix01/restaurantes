@@ -10,8 +10,6 @@ export default class Factura extends React.Component {
   }
 
   crearFactura() {
-    console.log("asdoi")
-    console.log("numfactura", document.factura.numfactura)
     let factura = {
       numfactura: document.getElementsByName("numfactura")[0].value,
       cliente: document.getElementsByName("cliente")[0].value,
@@ -29,13 +27,49 @@ export default class Factura extends React.Component {
       });
   }
 
+  updateFactura() {
+    let factura = {
+      numfactura: document.getElementsByName("numfactura")[0].value,
+      cliente: document.getElementsByName("cliente")[0].value,
+      costo: document.getElementsByName("costo")[0].value,
+      estado: document.getElementsByName("estado")[0].value,
+      date: document.getElementsByName("date")[0].value
+    }
+    axios
+      .post("/api/facturas/" + this.props.fid, factura)
+      .then(res => {
+        alert("Factura actualizada");
+        location.replace("/facturas");
+      })
+      .catch(error => {
+        alert(error.response.data);
+      });
+  }
+
+  handleSubmit() {
+    if (this.props.update) 
+      return this.updateFactura();
+    return this.crearFactura();
+  }
+
   componentDidMount() {
     if (this.props.update) {
       axios
         .get("/api/facturas/" + this.props.fid, factura)
         .then(res => {
           let factura = res.data;
-          alert(JSON.stringify(factura))
+          document.getElementsByName("numfactura")[0].value = factura.numFactura;
+          document.getElementsByName("cliente")[0].value = factura.nombreEmpresa;
+          document.getElementsByName("costo")[0].value = factura.cantidad;
+          document.getElementsByName("estado")[0].value = factura.estado;
+          let fecha = new Date(factura.fechaPago)
+          let month = fecha.getMonth();
+          let day = fecha.getDay();
+          document.getElementsByName("date")[0].value = String(fecha.getFullYear()) + "-" + (month < 9
+            ? '0'
+            : '') + String(month) + "-" + (day < 9
+            ? '0'
+            : '') + String(day);
         })
         .catch(error => {
           alert("la factura no existe");
@@ -136,7 +170,7 @@ export default class Factura extends React.Component {
         </div>
         <div class="form-group">
           <div class="col-md-8 col-md-offset-2">
-            <div class="btn btn-success" onClick= { () => this.crearFactura() }>
+            <div class="btn btn-success" onClick= { () => this.handleSubmit() }>
               Guardar
               <span class="glyphicon glyphicon-save"></span>
             </div>

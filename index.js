@@ -36,15 +36,15 @@ app.get('/api/facturas', (req, res) => {
 
 //actualizar crear
 app.post('/api/facturas/:id', (req, res) => {
-  let factura = new Factura({numFactura: req.body.numfactura, nombreEmpresa: req.body.cliente, fechaPago: req.body.date, cantidad: req.body.costo, estado: req.body.estado});
-  factura
-    .save()
-    .then((factura) => {
-      res.send(200, "ok");
-    })
-    .catch((err) => {
-      res.send(500, "La factura ya existe");
-    })
+  console.log(req.body)
+  Factura.findOneAndUpdate({
+    _id: req.param.id
+  }, req.body).then((factura) => {
+    console.log("updated!")
+    res.send(200, "ok");
+  }).catch((err) => {
+    res.send(500, "La factura no pudo ser modificada");
+  })
 });
 
 //obtener por id
