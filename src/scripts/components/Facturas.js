@@ -21,7 +21,7 @@ export default class Facturas extends React.Component {
       alert(id);
       axios.delete("/api/facturas", {params:{id:id}})
         .then(res => {
-          alert(res);
+          location.replace("/facturas")
         })
         .catch(error => {
           alert(error);
