@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 import Header from './Header'
 import Footer from './Footer'
@@ -18,7 +19,7 @@ export default class ModificarFactura extends React.Component {
                     <div class="row">
                         <div class="col-md-6 col-md-offset-3">
                             <h1>Modificar Factura</h1>
-                            <Factura update/>
+                            <Factura fid={this.props.match.params.id} update/>
                         </div>
                     </div>
                 </div>
