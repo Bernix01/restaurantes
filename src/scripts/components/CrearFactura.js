@@ -9,6 +9,40 @@ export default class CrearFactura extends React.Component {
         super(props)
     }
 
+    crearFactura(id) {
+    let confirmacion = confirm("¿Está seguro que desea eliminar esta factura?");
+
+    if (confirmacion) {
+      alert('Eliminando factura...');
+      alert(id);
+      axios.delete("/api/facturas", {params:{id:id}})
+        .then(res => {
+          alert(res);
+        })
+        .catch(error => {
+          alert(error);
+        });
+      window.location.reload();
+      
+    }
+    // alert(id);
+    // alert("Hola Mundo estoy eliminando factura");
+    // axios.delete("/api/facturas",{params:{id:id}})
+    //     .then(res => {
+    //       const facturaData = this.state.facturaData.map((factura) =>{
+    //         if (factura.deepEqual(res.data)) {
+    //           return Object.assign(factura, res.data)
+    //         }
+    //         // facultad.restaurants.map((restaurant)=>{
+    //         //     if(restaurant.deepEqual(res.data)){
+    //         //       return Object.assing(restaurant,res.data)
+    //         //     }
+    //         // })
+    //       })
+    //       this.setState({facturaData});
+    //     });
+  }
+
     render() {
         return (
 

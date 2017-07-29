@@ -14,7 +14,7 @@ FacturaSchema.path('numFactura').validate(function(dato){
 	return dato.length = 16;
 });
 
-const Factura = mongoose.model('Factura', FacturaSchema);
+const Factura = mongoose.model('fact', FacturaSchema, 'fact');
 
 module.exports = {
 	Factura: Factura

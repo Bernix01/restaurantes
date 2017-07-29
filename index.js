@@ -2,7 +2,9 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const Factura = require('./models.js').Factura;
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO_HOST || 'mongodb://localhost/restaurantes');
+mongoose.connect(process.env.MONGO_HOST || 'mongodb://localhost:27017/restaurantes');
+// var db = mongoose.connection;
+// console.log(db);
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/docs'));
@@ -25,6 +27,7 @@ app.post('/like', (req, res) => {
 });
 
 app.get('/api/facturas', (req, res) => {
+  console.log(req.statusCode)
   Factura
     .find({})
     .catch((err) => {
@@ -32,19 +35,20 @@ app.get('/api/facturas', (req, res) => {
       res.send(500, "error!");
     })
     .then((facturas) => {
-      res.send(200, facturas);
+      // console.log(facturas)
+      res.json(facturas);
     });
 });
 //obtener por id
 app.get('/api/facturas/:id', (req, res) => {
   //verificar si el id es valido
-  if (!req.params.id.match(/^[0-9a-fA-F]{24}$/)) 
+  if (!req.body.params.id.match(/^[0-9a-fA-F]{24}$/)) 
     res.send(400, "bad id");
   Factura
     .findById({_id: req.params.id})
     .then((factura) => {
-      console.log(factura);
-      res.send(200, factura);
+      // console.log(factura);
+      res.json(factura);
     })
     .catch((err) => {
       console.log(err)
@@ -55,17 +59,22 @@ app.get('/api/facturas/:id', (req, res) => {
 //borrar
 app.delete('/api/facturas', (req, res) => {
   //verificar si el id es valido
+  // console.log(req.statusCode);
+  // console.log(req.params);
+  // console.log("Hola Mundo");
+  console.log(req.params.id);
   if (!req.params.id.match(/^[0-9a-fA-F]{24}$/)) 
     res.send(400, "bad id");
   Factura
     .findByIdAndRemove(req.params.id)
-    .then(() => {
-      res.send(200, "ok");
-    })
     .catch((err) => {
       console.log("error deleting", err);
       res.send(500, "derp");
     })
+    .then(() => {
+      res.send(200, "ok");
+    })
+    
 })
 
 //crear
@@ -78,7 +87,7 @@ app.put('/api/facturas', (req, res) => {
       res.send(200, "ok");
     })
     .catch((err) => {
-      //console.log(err)
+      console.log(err)
       res.send(500, "err");
     })
 });
