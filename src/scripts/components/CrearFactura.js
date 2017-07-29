@@ -24,6 +24,6 @@ export default class CrearFactura extends React.Component {
         </div>
         <Footer/>
       </div>
-    )
+  )
   }
 }

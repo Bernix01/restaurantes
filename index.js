@@ -59,11 +59,10 @@ app.get('/api/facturas/:id', (req, res) => {
 app.delete('/api/facturas', (req, res) => {
   // verificar si el id es valido console.log(req.statusCode);
   // console.log(req.params); console.log("Hola Mundo");
-  console.log(req);
-  if (!req.params.id.match(/^[0-9a-fA-F]{24}$/)) 
+  if (!req.query.id.match(/^[0-9a-fA-F]{24}$/)) 
     res.send(400, "bad id");
   Factura
-    .findByIdAndRemove(req.params.id)
+    .findByIdAndRemove(req.query.id)
     .catch((err) => {
       console.log("error deleting", err);
       res.send(500, "derp");

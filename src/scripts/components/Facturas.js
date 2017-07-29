@@ -17,34 +17,16 @@ export default class Facturas extends React.Component {
     let confirmacion = confirm("¿Está seguro que desea eliminar esta factura?");
 
     if (confirmacion) {
-      alert('Eliminando factura...');
-      alert(id);
       axios.delete("/api/facturas", {params:{id:id}})
         .then(res => {
           location.replace("/facturas")
         })
         .catch(error => {
-          alert(error);
+          alert("un error ha sucedido :(")
         });
       window.location.reload();
       
     }
-    // alert(id);
-    // alert("Hola Mundo estoy eliminando factura");
-    // axios.delete("/api/facturas",{params:{id:id}})
-    //     .then(res => {
-    //       const facturaData = this.state.facturaData.map((factura) =>{
-    //         if (factura.deepEqual(res.data)) {
-    //           return Object.assign(factura, res.data)
-    //         }
-    //         // facultad.restaurants.map((restaurant)=>{
-    //         //     if(restaurant.deepEqual(res.data)){
-    //         //       return Object.assing(restaurant,res.data)
-    //         //     }
-    //         // })
-    //       })
-    //       this.setState({facturaData});
-    //     });
   }
 
   componentDidMount() {
@@ -81,7 +63,6 @@ export default class Facturas extends React.Component {
   render() {
 
     let facturaData = this.state.facturaData
-
     return (
       <div>
         <Header page={this.props.location.pathname}/>
@@ -114,7 +95,7 @@ export default class Facturas extends React.Component {
                                   <td>{factura.cantidad}</td>
                                   <td>{factura.estado}</td>
                                   <td class="td-action">
-                                    <a href={`/factura/${encodeURIComponent(factura.id)}`} rel="tooltip" title="Editar" class="btn btn-simple btn-warning btn-xs" data-original-title="Editar">
+                                    <a href={`/factura/${encodeURIComponent(factura._id)}`} rel="tooltip" title="Editar" class="btn btn-simple btn-warning btn-xs" data-original-title="Editar">
                                       <i class="fa fa-pencil"></i>
                                     </a>
                                     <a rel="tooltip" title="Eliminar" class="btn-simple btn btn-danger btn-xs" data-original-title="Eliminar" onClick={() => this.eliminarFactura(factura._id)}>
