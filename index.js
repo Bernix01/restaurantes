@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require('body-parser');
-const Factura = require('./models.js').Factura;
+const Factura = require('./src/models/FacturaModel.js').Factura;
+const Recibo = require('./src/models/ReciboModel.js').Recibo;
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_HOST || 'mongodb://localhost:27017/restaurantes');
 const app = express();
