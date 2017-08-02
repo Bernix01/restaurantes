@@ -30,10 +30,10 @@ export default class Factura extends React.Component {
   updateFactura() {
     let factura = {
       numfactura: document.getElementsByName("numfactura")[0].value,
-      cliente: document.getElementsByName("cliente")[0].value,
-      costo: document.getElementsByName("costo")[0].value,
+      nombreEmpresa: document.getElementsByName("cliente")[0].value,
+      cantidad: Number.parseFloat(document.getElementsByName("costo")[0].value),
       estado: document.getElementsByName("estado")[0].value,
-      date: document.getElementsByName("date")[0].value
+      fechaPago: document.getElementsByName("date")[0].value
     }
     axios
       .post("/api/facturas/" + this.props.fid, factura)

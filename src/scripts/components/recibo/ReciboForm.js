@@ -10,17 +10,17 @@ export default class Recibo extends React.Component {
   }
 
   crearRecibo() {
-    let factura = {
-      numfactura: document.getElementsByName("numfactura")[0].value,
-      cliente: document.getElementsByName("cliente")[0].value,
-      costo: document.getElementsByName("costo")[0].value,
-      estado: document.getElementsByName("estado")[0].value,
-      date: document.getElementsByName("date")[0].value
+    let recibo = {
+      numRecibo: document.getElementsByName("numRecibo")[0].value,
+      nombreRecibido: document.getElementsByName("nombreRecibido")[0].value,
+      concepto: document.getElementsByName("concepto")[0].value,
+      cantidad: Number.parseFloat(document.getElementsByName("cantidad")[0].value),
+      fechaPago: document.getElementsByName("date")[0].value
     }
     axios
-      .put("/api/facturas", factura)
+      .put("/api/recibos", recibo)
       .then(res => {
-        location.replace("/facturas");
+        location.replace("/recibos");
       })
       .catch(error => {
         alert(error.response.data);
@@ -28,18 +28,18 @@ export default class Recibo extends React.Component {
   }
 
   updateRecibo() {
-    let factura = {
-      numfactura: document.getElementsByName("numfactura")[0].value,
-      cliente: document.getElementsByName("cliente")[0].value,
-      costo: document.getElementsByName("costo")[0].value,
-      estado: document.getElementsByName("estado")[0].value,
-      date: document.getElementsByName("date")[0].value
+    let recibo = {
+      numRecibo: document.getElementsByName("numRecibo")[0].value,
+      nombreRecibido: document.getElementsByName("nombreRecibido")[0].value,
+      concepto: document.getElementsByName("concepto")[0].value,
+      cantidad: Number.parseFloat(document.getElementsByName("cantidad")[0].value),
+      fechaPago: document.getElementsByName("date")[0].value
     }
     axios
-      .post("/api/facturas/" + this.props.fid, factura)
+      .post("/api/recibos/" + this.props.fid, recibo)
       .then(res => {
         alert("Recibo actualizada");
-        location.replace("/facturas");
+        location.replace("/recibos");
       })
       .catch(error => {
         alert(error.response.data);
@@ -55,14 +55,14 @@ export default class Recibo extends React.Component {
   componentDidMount() {
     if (this.props.update) {
       axios
-        .get("/api/facturas/" + this.props.fid, factura)
+        .get("/api/recibos/" + this.props.fid, recibo)
         .then(res => {
-          let factura = res.data;
-          document.getElementsByName("numfactura")[0].value = factura.numRecibo;
-          document.getElementsByName("cliente")[0].value = factura.nombreEmpresa;
-          document.getElementsByName("costo")[0].value = factura.cantidad;
-          document.getElementsByName("estado")[0].value = factura.estado;
-          let fecha = new Date(factura.fechaPago)
+          let recibo = res.data;
+          document.getElementsByName("numRecibo")[0].value = recibo.numRecibo;
+          document.getElementsByName("nombreRecibido")[0].value = recibo.nombreRecibido;
+          document.getElementsByName("cantidad")[0].value = recibo.cantidad;
+          document.getElementsByName("concepto")[0].value = recibo.concepto;
+          let fecha = new Date(recibo.fechaPago)
           let month = fecha.getMonth();
           let day = fecha.getDay();
           document.getElementsByName("date")[0].value = String(fecha.getFullYear()) + "-" + (month < 9
@@ -72,8 +72,8 @@ export default class Recibo extends React.Component {
             : '') + String(day);
         })
         .catch(error => {
-          alert("la factura no existe");
-          location.replace("/facturas");
+          alert("el recibo no existe");
+          location.replace("/recibos");
         });
     }
   }
@@ -81,20 +81,20 @@ export default class Recibo extends React.Component {
   render() {
     return (
       <form
-        action="/api/facturas"
+        action="/api/recibo"
         class="well form-horizontal"
-        name="factura"
-        id="formulario-factura"
+        name="recibo"
+        id="formulario-recibo"
         form>
         <div class="form-group">
           <label class="col-md-3 control-label">Número de Recibo</label>
-          <div class="col-md-9 inputGroupContainer">
+          <div class="col-md-9 inputGroupContainer"> 
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="glyphicon glyphicon-pencil"></i>
               </span>
               <input
-                name="numfactura"
+                name="numRecibo"
                 placeholder="Número de Recibo"
                 class="form-control"
                 type="text"
@@ -103,15 +103,15 @@ export default class Recibo extends React.Component {
           </div>
         </div>
         <div class="form-group">
-          <label class="col-md-3 control-label">Cliente</label>
+          <label class="col-md-3 control-label">Recibido por</label>
           <div class="col-md-9 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="glyphicon glyphicon-user"></i>
               </span>
               <input
-                name="cliente"
-                placeholder="Cliente"
+                name="nombreRecibido"
+                placeholder="nombre"
                 class="form-control"
                 type="text"
                 required/>
@@ -119,15 +119,31 @@ export default class Recibo extends React.Component {
           </div>
         </div>
         <div class="form-group">
-          <label class="col-md-3 control-label">Fecha Máxima de Pago</label>
+          <label class="col-md-3 control-label">Concepto</label>
+          <div class="col-md-9 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-user"></i>
+              </span>
+              <input
+                name="ćoncepto"
+                placeholder="concepto"
+                class="form-control"
+                type="text"
+                required/>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-3 control-label">Fecha de Pago</label>
           <div class="col-md-9 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="glyphicon glyphicon-calendar"></i>
               </span>
               <input
-                name="date"
-                placeholder="Fecha Máxima de Pago"
+                name="fechaPago"
+                placeholder="Fecha de Pago"
                 class="form-control"
                 type="date"
                 required/>
@@ -135,36 +151,20 @@ export default class Recibo extends React.Component {
           </div>
         </div>
         <div class="form-group">
-          <label class="col-md-3 control-label">Total a Pagar</label>
+          <label class="col-md-3 control-label">Cantidad</label>
           <div class="col-md-9 inputGroupContainer">
             <div class="input-group">
               <span class="input-group-addon">
                 <i class="glyphicon glyphicon-usd"></i>
               </span>
               <input
-                name="costo"
-                placeholder="Total a Pagar"
+                name="cantidad"
+                placeholder="Cantidad"
                 class="form-control"
                 type="number"
                 min="0"
                 step="0.01"
                 required/>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="col-md-3 control-label">Mensaje</label>
-          <div class="col-md-9 inputGroupContainer">
-            <div class="input-group">
-              <span class="input-group-addon">
-                <i class="glyphicon glyphicon-info-sign"></i>
-              </span>
-              <select name="estado" class="form-control">
-                <option disabled selected value>Seleccione un estado</option>
-                <option value="pagado">Pagado</option>
-                <option value="pendiente">Pendiente</option>
-                <option value="acumulado">Acumulado</option>
-              </select>
             </div>
           </div>
         </div>
