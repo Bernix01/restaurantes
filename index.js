@@ -35,6 +35,17 @@ app.get('/api/facturas', (req, res) => {
     });
 });
 
+app.get('/api/recibos', (req, res) => {
+  Recibo
+    .find({})
+    .catch((err) => {
+      res.send(500, "error!");
+    })
+    .then((recibos) => {
+      res.json(recibos);
+    });
+});
+
 //actualizar crear
 app.post('/api/facturas/:id', (req, res) => {
   console.log(req.body)
@@ -45,6 +56,18 @@ app.post('/api/facturas/:id', (req, res) => {
     res.send(200, "ok");
   }).catch((err) => {
     res.send(500, "La factura no pudo ser modificada");
+  })
+});
+
+app.post('/api/recibos/:id', (req, res) => {
+  console.log(req.body)
+  Recibo.findOneAndUpdate({
+    _id: req.param.id
+  }, req.body).then((recibo) => {
+    console.log("updated!")
+    res.send(200, "ok");
+  }).catch((err) => {
+    res.send(500, "El recibo no se pudo modificar");
   })
 });
 
@@ -63,6 +86,19 @@ app.get('/api/facturas/:id', (req, res) => {
     })
 });
 
+app.get('/api/recibos/:id', (req, res) => {
+  if(!req.params.id.match(/^[0-9a-fA-F]{24}$/))
+    res.send(400, "bad id");
+  Recibo
+    .findById({_id: req.param.id})
+    .then((recibo) => {
+      res.json(recibo);
+    })
+  .catch((err) => {
+    res.send(500, "derp");
+  })
+});
+
 //borrar
 app.delete('/api/facturas', (req, res) => {
   if (!req.query.id.match(/^[0-9a-fA-F]{24}$/)) 
@@ -77,6 +113,19 @@ app.delete('/api/facturas', (req, res) => {
     })
 
 })
+
+app.delete('/api/recibos', (req, res) => {
+  if (!req.query.id.match(/^[0-9a-fA-F]{24}$/))
+    res.send(400, "bad id");
+  Recibo
+    .findByIdAndRemove(req.query.id)
+    .catch((err) => {
+      res.send(500, "derp");
+    })
+    .then(() => {
+      res.send(200, "ok");
+    })
+});
 
 //crear
 app.put('/api/facturas', (req, res) => {
