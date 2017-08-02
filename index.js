@@ -140,6 +140,18 @@ app.put('/api/facturas', (req, res) => {
     })
 });
 
+app.put('/api/recibos', (req, res) => {
+  let recibo = new Recibo({numRecibo: req.body.numrecibo, fechaPago: req.body.date, nombreRecibido: req.body.nombrerecibido, estado: req.body.estadoactual, concepto: req.body.concep});
+  recibo
+    .save()
+    .then((recibo) => {
+      res.send(200, "ok");
+    })
+    .catch((err) => {
+      res.send(500, "El recibo ya existe");
+    })
+});
+
 app.get('/datos', (req, res) => {
   res.send(200, {
     "mas-votados": [
