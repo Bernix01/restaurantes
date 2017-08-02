@@ -50,7 +50,7 @@ app.get('/api/recibos', (req, res) => {
 app.post('/api/facturas/:id', (req, res) => {
   console.log(req.body)
   Factura.findOneAndUpdate({
-    _id: req.param.id
+    "_id": req.params.id
   }, req.body).then((factura) => {
     console.log("updated!")
     res.send(200, "ok");
