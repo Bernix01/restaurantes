@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-//modelo factura
 const ReciboSchema = new Schema({
 	numRecibo: {type: String, required: true, unique: true},
     fechaPago: {type: Date, required: true},
