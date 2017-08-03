@@ -15,7 +15,7 @@ export default class Recibo extends React.Component {
       nombreRecibido: document.getElementsByName("nombreRecibido")[0].value,
       concepto: document.getElementsByName("concepto")[0].value,
       cantidad: Number.parseFloat(document.getElementsByName("cantidad")[0].value),
-      fechaPago: document.getElementsByName("date")[0].value
+      fechaPago: document.getElementsByName("fechaPago")[0].value
     }
     axios
       .put("/api/recibos", recibo)
@@ -33,7 +33,7 @@ export default class Recibo extends React.Component {
       nombreRecibido: document.getElementsByName("nombreRecibido")[0].value,
       concepto: document.getElementsByName("concepto")[0].value,
       cantidad: Number.parseFloat(document.getElementsByName("cantidad")[0].value),
-      fechaPago: document.getElementsByName("date")[0].value
+      fechaPago: document.getElementsByName("fechaPago")[0].value
     }
     axios
       .post("/api/recibos/" + this.props.fid, recibo)
@@ -126,7 +126,7 @@ export default class Recibo extends React.Component {
                 <i class="glyphicon glyphicon-user"></i>
               </span>
               <input
-                name="ćoncepto"
+                name="concepto"
                 placeholder="concepto"
                 class="form-control"
                 type="text"
