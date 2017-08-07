@@ -1,4 +1,5 @@
 // $btnColor: #55FF55;
+$tamanioParrafo : 15px;
 
 .info-row {
 
@@ -8,6 +9,9 @@
 
     .info-texto {
         text-align: center;
+        p {
+            font-size: $tamanioParrafo;
+        }
     }
     
     .boton {

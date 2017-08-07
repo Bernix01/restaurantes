@@ -1,7 +1,10 @@
 $bgDefault: #1a558c;
 $bgHighlight: #bfb48f;
 $colDefault: #ffffff;
-$colHighlight: #3e4c56;
+$colHighlight: #FFFFFF;
+$bgHighlightActive: rgba(0, 0, 0, 0.6);
+$bgHighlightFocus: rgba(0, 0, 0, 0.3);
+// $colHighlight: #3e4c56;
 $dropDown: false;
 .navbar-default {
     background-color: $bgDefault;
@@ -22,7 +25,8 @@ $dropDown: false;
                 color: $colDefault;
                 &:hover,
                 &:focus {
-                    color: $colHighlight;
+                    background-color: $bgHighlightFocus;
+                    // color: $colHighlight;
                 }
             }
             @if $dropDown {
@@ -58,8 +62,7 @@ $dropDown: false;
             >a,
             >a:hover,
             >a:focus {
-                color: $colHighlight;
-                background-color: $bgHighlight;
+                background-color: $bgHighlightActive;
             }
         }
         >.open {
