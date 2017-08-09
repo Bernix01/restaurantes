@@ -30,7 +30,9 @@ import Facturas from './components/Facturas'
 import CrearRecibo from './components/recibo/CrearRecibo'
 import ModificarRecibo from './components/recibo/ModificarRecibo'
 import Recibos from './components/recibo/RecibosView'
-
+import CrearTicket from './components/ticket/CrearTicket'
+import ModificarTicket from './components/ticket/ModificarTicket'
+import Tickets from './components/ticket/TicketsView'
 
 console.log("sss")
 const logger = createLogger()
@@ -56,6 +58,10 @@ ReactDOM.render(
       <Route exact path="/recibo" component={CrearRecibo}/>
       <Route exact path="/recibo/:id" component={ModificarRecibo}/>
       <Route exact path="/recibos" component={Recibos}/>
+      <Route exact path="/ticket" component={CrearTicket}/>
+      <Route exact path="/ticket/:id" component={ModificarTicket}/>
+      <Route exact path="/tickets" component={Tickets}/>
+
     </div>
   </ConnectedRouter>
 </Provider>, document.getElementById('app'))
