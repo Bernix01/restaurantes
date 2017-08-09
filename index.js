@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const Factura = require('./src/models/FacturaModel.js').Factura;
 const Recibo = require('./src/models/ReciboModel.js').Recibo;
+const Ticket = require('./src/models/TicketModel.js').Ticket;
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_HOST || 'mongodb://localhost:27017/restaurantes');
 const app = express();
@@ -46,6 +47,17 @@ app.get('/api/recibos', (req, res) => {
     });
 });
 
+app.get('/api/tickets', (req, res) => {
+  Ticket
+    .find({})
+    .catch((err) => {
+      res.send(500, "error!");
+    })
+    .then((tickets) => {
+      res.json(tickets);
+    });
+});
+
 //actualizar crear
 app.post('/api/facturas/:id', (req, res) => {
   console.log(req.body)
@@ -71,6 +83,18 @@ app.post('/api/recibos/:id', (req, res) => {
   })
 });
 
+app.post('/api/tickets/:id', (req, res) => {
+  console.log(req.body)
+  Ticket.findOneAndUpdate({
+    _id: req.param.id
+  }, req.body).then((ticket) => {
+    console.log("updated!")
+    res.send(200, "ok");
+  }).catch((err) => {
+    res.send(500, "El ticket no se pudo modificar");
+  })
+});
+
 //obtener por id
 app.get('/api/facturas/:id', (req, res) => {
   //verificar si el id es valido
@@ -93,6 +117,19 @@ app.get('/api/recibos/:id', (req, res) => {
     .findById({_id: req.param.id})
     .then((recibo) => {
       res.json(recibo);
+    })
+  .catch((err) => {
+    res.send(500, "derp");
+  })
+});
+
+app.get('/api/tickets/:id', (req, res) => {
+  if(!req.params.id.match(/^[0-9a-fA-F]{24}$/))
+    res.send(400, "bad id");
+  Ticket
+    .findById({_id: req.param.id})
+    .then((ticket) => {
+      res.json(ticket);
     })
   .catch((err) => {
     res.send(500, "derp");
@@ -127,6 +164,19 @@ app.delete('/api/recibos', (req, res) => {
     })
 });
 
+app.delete('/api/tickets', (req, res) => {
+  if (!req.query.id.match(/^[0-9a-fA-F]{24}$/))
+    res.send(400, "bad id");
+  Ticket
+    .findByIdAndRemove(req.query.id)
+    .catch((err) => {
+      res.send(500, "derp");
+    })
+    .then(() => {
+      res.send(200, "ok");
+    })
+});
+
 //crear
 app.put('/api/facturas', (req, res) => {
   let factura = new Factura({numFactura: req.body.numfactura, nombreEmpresa: req.body.cliente, fechaPago: req.body.date, cantidad: req.body.costo, estado: req.body.estado});
@@ -149,6 +199,18 @@ app.put('/api/recibos', (req, res) => {
     })
     .catch((err) => {
       res.send(500, "El recibo ya existe");
+    })
+});
+
+app.put('/api/tickets', (req, res) => {
+  let Ticket = new Ticket({fechaEmision: req.body.fechaEmision, origen: req.body.origen, destino: req.body.destino, precio: req.body.precio, adquirente: req.body.adquirente, puesto: req.body.puesto});
+  Ticket
+    .save()
+    .then((Ticket) => {
+      res.send(200, "ok");
+    })
+    .catch((err) => {
+      res.send(500, "El Ticket ya existe");
     })
 });
 
