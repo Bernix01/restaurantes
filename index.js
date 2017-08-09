@@ -114,7 +114,7 @@ app.get('/api/recibos/:id', (req, res) => {
   if(!req.params.id.match(/^[0-9a-fA-F]{24}$/))
     res.send(400, "bad id");
   Recibo
-    .findById({_id: req.param.id})
+    .findById({_id: req.params.id})
     .then((recibo) => {
       res.json(recibo);
     })
@@ -126,8 +126,9 @@ app.get('/api/recibos/:id', (req, res) => {
 app.get('/api/tickets/:id', (req, res) => {
   if(!req.params.id.match(/^[0-9a-fA-F]{24}$/))
     res.send(400, "bad id");
+  // console.log(req.params.id);
   Ticket
-    .findById({_id: req.param.id})
+    .findById({_id: req.params.id})
     .then((ticket) => {
       res.json(ticket);
     })
@@ -203,10 +204,10 @@ app.put('/api/recibos', (req, res) => {
 });
 
 app.put('/api/tickets', (req, res) => {
-  let Ticket = new Ticket({fechaEmision: req.body.fechaEmision, origen: req.body.origen, destino: req.body.destino, precio: req.body.precio, adquirente: req.body.adquirente, puesto: req.body.puesto});
-  Ticket
+  let ticket = new Ticket({fechaEmision: req.body.fechaEmision, origen: req.body.origen, destino: req.body.destino, precio: req.body.precio, adquirente: req.body.adquirente, puesto: req.body.puesto});
+  ticket
     .save()
-    .then((Ticket) => {
+    .then((ticket) => {
       res.send(200, "ok");
     })
     .catch((err) => {
