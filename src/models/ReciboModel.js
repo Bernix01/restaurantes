@@ -8,11 +8,11 @@ const ReciboSchema = new Schema({
 	concepto: {type: Number, required: true}
 })
 
-FacturaSchema.path('numRecibo').validate(function(dato){
+ReciboSchema.path('numRecibo').validate(function(dato){
 	return dato.length === 16;
 });
 
-const Factura = mongoose.model('recibo', ReciboSchema, 'recibo');
+const Recibo = mongoose.model('recibo', ReciboSchema, 'recibo');
 
 module.exports = {
 	Recibo: Recibo

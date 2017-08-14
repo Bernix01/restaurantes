@@ -27,9 +27,9 @@ import Restaurant from './components/Restaurante'
 import CrearFactura from './components/CrearFactura'
 import ModificarFactura from './components/ModificarFactura'
 import Facturas from './components/Facturas'
-import Tickets from './components/Tickets'
-import ModificarTickets from '/components/ModificarTickets'
-import CrearTicket from '/components/CrearTickets'
+import tickets from './components/tickets'
+import ModificarTickets from './components/ModificarTicket'
+import CrearTicket from './components/CrearTickets'
 
 
 console.log("sss")
@@ -53,6 +53,9 @@ ReactDOM.render(
       <Route exact path="/factura" component={CrearFactura}/>
       <Route exact path="/factura/:id" component={ModificarFactura}/>
       <Route exact path="/facturas" component={Facturas}/>
+      <Route exact path="/ticket" component={CrearTicket}/>
+      <Route exact path="/ticket/:id" component={ModificarTickets}/>
+      <Route exact path="/tickets" component={tickets}/>
     </div>
   </ConnectedRouter>
 </Provider>, document.getElementById('app'))
