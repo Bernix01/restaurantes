@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const Factura = require('./src/models/FacturaModel.js').Factura;
 const Recibo = require('./src/models/ReciboModel.js').Recibo;
+const Ticket = require('./src/models/Ticket.js').Ticket;
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_HOST || 'mongodb://localhost:27017/restaurantes');
 const app = express();
@@ -22,6 +23,8 @@ app.post('/like', (req, res) => {
   rest.likes++;
   res.send(200, rest);
 });
+
+
 
 //obtener todos
 app.get('/api/facturas', (req, res) => {
@@ -149,6 +152,87 @@ app.put('/api/recibos', (req, res) => {
     })
     .catch((err) => {
       res.send(500, "El recibo ya existe");
+    })
+});
+
+
+//obtener todos
+app.get('/api/tickets', (req, res) => {
+  Ticket
+    .find({})
+    .catch((err) => {
+      res.send(500, "error!");
+    })
+    .then((tickets) => {
+      res.json(tickets);
+    });
+});
+
+//update
+app.post('/api/tickets/:id', (req, res) => {
+  if(!req.body)
+    return res.send(400,"You failed!");
+  console.log(req.params.id)
+  Ticket.findOneAndUpdate({
+    _id: req.params.id 
+  }, req.body).then((recibo) => {
+    console.log("updated!")
+    res.send(200, "ok");
+  }).catch((err) => {
+    console.log(err)
+    res.send(500, "El recibo no se pudo modificar");
+  })
+});
+
+//crear
+app.put('/api/tickets', (req, res) => {
+  let ticket = new Ticket({
+    origen: req.body.origen,
+    fechaPago: req.body.fechaPago,
+    destino: req.body.destino,
+    adquiriente: req.body.adquiriente,
+    puesto: req.body.puesto,
+    precio:req.body.precio} );
+  ticket
+    .save()
+    .then((ticket) => {
+      res.send(200, "ok");
+    })
+    .catch((err) => {
+      console.log(err);
+      res.send(500, "El ticket ya existe");
+    })
+});
+
+//borrar
+app.delete('/api/tickets', (req, res) => {
+  if (!req.query.id.match(/^[0-9a-fA-F]{24}$/)) 
+    res.send(400, "bad id");
+  Ticket
+    .findByIdAndRemove(req.query.id)
+    .catch((err) => {
+      console.log(err);
+      res.send(500, "derp");
+    })
+    .then(() => {
+      res.send(200, "ok");
+    })
+
+});
+
+
+//obtener por id
+app.get('/api/tickets/:id', (req, res) => {
+  //verificar si el id es valido
+  if (!req.params.id.match(/^[0-9a-fA-F]{24}$/)) 
+    res.send(400, "bad id");
+  Ticket
+    .findById({_id: req.params.id})
+    .then((ticket) => {
+      res.json(ticket);
+    })
+    .catch((err) => {
+      res.send(500, "derp");
     })
 });
 
