@@ -27,6 +27,9 @@ import Restaurant from './components/Restaurante'
 import CrearFactura from './components/CrearFactura'
 import ModificarFactura from './components/ModificarFactura'
 import Facturas from './components/Facturas'
+import Tickets from './components/Tickets'
+import ModificarTickets from '/components/ModificarTickets'
+import CrearTicket from '/components/CrearTickets'
 
 
 console.log("sss")
