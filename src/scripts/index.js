@@ -30,6 +30,7 @@ import Facturas from './components/Facturas'
 import tickets from './components/tickets'
 import ModificarTickets from './components/ModificarTicket'
 import CrearTicket from './components/CrearTickets'
+import Lista from './components/listas'
 
 
 console.log("sss")
@@ -56,6 +57,7 @@ ReactDOM.render(
       <Route exact path="/ticket" component={CrearTicket}/>
       <Route exact path="/ticket/:id" component={ModificarTickets}/>
       <Route exact path="/tickets" component={tickets}/>
+      <Route exact path="/listas" component={Lista}/>
     </div>
   </ConnectedRouter>
 </Provider>, document.getElementById('app'))
