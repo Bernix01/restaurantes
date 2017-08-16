@@ -3,12 +3,32 @@ const bodyParser = require('body-parser');
 const Factura = require('./src/models/FacturaModel.js').Factura;
 const Recibo = require('./src/models/ReciboModel.js').Recibo;
 const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO_HOST || 'mongodb://localhost:27017/restaurantes');
+const soap = mongoose.connect(process.env.MONGO_HOST || 'mongodb://localhost:27017/restaurantes');
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/docs'));
 
 app.listen(process.env.PORT || 8080, () => {});
+
+app.get('/api/lista', (req, res) => {
+  var soap = require('soap');
+  var url = 'https://graphical.weather.gov/xml/SOAP_server/ndfdXMLserver.php?wsdl';
+  var args = {
+    latitude: 38.99,
+    longitude: -77.01,
+    product: "time-series",
+    startTime: "2015-04-27T12:00",
+    endTime: "2015-05-27T12:00",
+    Unit: "m",
+    maxt:true
+  };
+  soap.createClient(url, function (err, client) {
+    client
+      .NDFDgen(args, function (err, result) {
+        res.send(200,result.dwmlOut.$value)
+      });
+  });
+})
 
 app.get('/hola', (req, res) => {
   res.send(200, "HOLA!");
@@ -87,16 +107,16 @@ app.get('/api/facturas/:id', (req, res) => {
 });
 
 app.get('/api/recibos/:id', (req, res) => {
-  if(!req.params.id.match(/^[0-9a-fA-F]{24}$/))
+  if (!req.params.id.match(/^[0-9a-fA-F]{24}$/)) 
     res.send(400, "bad id");
   Recibo
     .findById({_id: req.param.id})
     .then((recibo) => {
       res.json(recibo);
     })
-  .catch((err) => {
-    res.send(500, "derp");
-  })
+    .catch((err) => {
+      res.send(500, "derp");
+    })
 });
 
 //borrar
@@ -115,7 +135,7 @@ app.delete('/api/facturas', (req, res) => {
 })
 
 app.delete('/api/recibos', (req, res) => {
-  if (!req.query.id.match(/^[0-9a-fA-F]{24}$/))
+  if (!req.query.id.match(/^[0-9a-fA-F]{24}$/)) 
     res.send(400, "bad id");
   Recibo
     .findByIdAndRemove(req.query.id)

@@ -30,6 +30,7 @@ import Facturas from './components/Facturas'
 import CrearRecibo from './components/recibo/CrearRecibo'
 import ModificarRecibo from './components/recibo/ModificarRecibo'
 import Recibos from './components/recibo/RecibosView'
+import Lista from './components/listas'
 
 
 console.log("sss")
@@ -53,6 +54,7 @@ ReactDOM.render(
       <Route exact path="/factura" component={CrearFactura}/>
       <Route exact path="/factura/:id" component={ModificarFactura}/>
       <Route exact path="/facturas" component={Facturas}/>
+      <Route exact path="/listas" component={Lista}/>
       <Route exact path="/recibo" component={CrearRecibo}/>
       <Route exact path="/recibo/:id" component={ModificarRecibo}/>
       <Route exact path="/recibos" component={Recibos}/>
