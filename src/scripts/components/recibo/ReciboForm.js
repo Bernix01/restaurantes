@@ -64,7 +64,7 @@ export default class Recibo extends React.Component {
           document.getElementsByName("concepto")[0].value = recibo.concepto;
           let fecha = new Date(recibo.fechaPago)
           let month = fecha.getMonth() + 1;
-          let day = fecha.getDate() + 1;
+          let day = fecha.getDate();
           document.getElementsByName("fechaPago")[0].value = String(fecha.getFullYear()) + "-" + (month < 9
             ? '0'
             : '') + String(month) + "-" + (day < 9
