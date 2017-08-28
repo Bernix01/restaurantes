@@ -51,7 +51,7 @@ export default class Recibos extends React.Component {
                     <div class="col-md-8 col-md-offset-2">
                       <div class="card-header">
                         <h1>Recibos</h1>
-                        <a href="/recibo" class="btn btn-success btn-block"><i class="fa fa-th-list"></i> Crear Recibo</a>
+                        <a href="/recibo" class="btn btn-success btn-block"><i class="fa fa-th-list"></i>Crear Recibo</a>
                       </div>
                       <div class="card-content table-responsive">
                         <table class="table table-bordered table-hover">
@@ -61,7 +61,7 @@ export default class Recibos extends React.Component {
                               <th>Recibido por</th>
                               <th>Fecha Pago</th>
                               <th>Concepto</th>
-                              <th>Estado</th>
+                              <th>Cantidad</th>
                               <th>Opciones</th>
                             </tr>
                           </thead>
@@ -73,7 +73,7 @@ export default class Recibos extends React.Component {
                                   <td>{recibo.nombreRecibido}</td>
                                   <td>{recibo.fechaPago}</td>
                                   <td>{recibo.concepto}</td>
-                                  <td>{recibo.estado}</td>
+                                  <td>{recibo.cantidad}</td>
                                   <td class="td-action">
                                     <a href={`/recibo/${encodeURIComponent(recibo._id)}`} rel="tooltip" title="Editar" class="btn btn-simple btn-warning btn-xs" data-original-title="Editar">
                                       <i class="fa fa-pencil"></i>

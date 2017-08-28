@@ -63,16 +63,16 @@ export default class Recibo extends React.Component {
           document.getElementsByName("cantidad")[0].value = recibo.cantidad;
           document.getElementsByName("concepto")[0].value = recibo.concepto;
           let fecha = new Date(recibo.fechaPago)
-          let month = fecha.getMonth();
-          let day = fecha.getDay();
-          document.getElementsByName("date")[0].value = String(fecha.getFullYear()) + "-" + (month < 9
+          let month = fecha.getMonth() + 1;
+          let day = fecha.getDate() + 1;
+          document.getElementsByName("fechaPago")[0].value = String(fecha.getFullYear()) + "-" + (month < 9
             ? '0'
             : '') + String(month) + "-" + (day < 9
             ? '0'
             : '') + String(day);
         })
         .catch(error => {
-          alert("el recibo no existe");
+          alert(error);
           location.replace("/recibos");
         });
     }

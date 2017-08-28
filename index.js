@@ -80,9 +80,9 @@ app.post('/api/facturas/:id', (req, res) => {
 });
 
 app.post('/api/recibos/:id', (req, res) => {
-  console.log(req.body)
+  console.log(req.params.id);
   Recibo.findOneAndUpdate({
-    _id: req.param.id
+    _id: req.params.id
   }, req.body).then((recibo) => {
     console.log("updated!")
     res.send(200, "ok");
@@ -110,7 +110,7 @@ app.get('/api/recibos/:id', (req, res) => {
   if (!req.params.id.match(/^[0-9a-fA-F]{24}$/)) 
     res.send(400, "bad id");
   Recibo
-    .findById({_id: req.param.id})
+    .findById({_id: req.params.id})
     .then((recibo) => {
       res.json(recibo);
     })
@@ -161,7 +161,7 @@ app.put('/api/facturas', (req, res) => {
 });
 
 app.put('/api/recibos', (req, res) => {
-  let recibo = new Recibo({numRecibo: req.body.numrecibo, fechaPago: req.body.date, nombreRecibido: req.body.nombrerecibido, estado: req.body.estadoactual, concepto: req.body.concep});
+  let recibo = new Recibo({numRecibo: req.body.numRecibo, fechaPago: req.body.fechaPago, nombreRecibido: req.body.nombreRecibido, cantidad: req.body.cantidad, concepto: req.body.concepto});
   recibo
     .save()
     .then((recibo) => {
